@@ -6,7 +6,7 @@ Week 3
 Lecture
 -------
 
-* Video: https://youtu.be/aUnK3Wvj8CU
+* Video: Available soon
 
 
 Lab
