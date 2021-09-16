@@ -17,11 +17,19 @@ Lab 1 - The Worst Surgical Robot
 
 Step 0. Setup
 ^^^^^^^^^^^^^^
-Insert photo of required parts: Teensy attached to bottom pcb, power supply, motor, motor controller
+#. Install `VSCode <https://code.visualstudio.com/Download>`_
+#. Install the PlatformIO extension for VSCode.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/LKH2Drp_evc" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 Step 1. Connecting hardware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+#. Attach the M2006 motor to the white cone via 3 M3 flat head screws.
 #. Plug the M2006's 3-wire power cable and 4-wire ribbon encoder cable into the C610 motor controller.
 #. Plug the motor controller's 2-wire power cable into a XT30 port on the Pupper PCB and the 2-wire CAN cable into a smaller CAN port.
 #. Plug the Teensy into the socket on the Pupper PCB if it's not already.
@@ -29,62 +37,85 @@ Step 1. Connecting hardware
 #. Plug the Teensy into your laptop via micro USB to USB A/C.
 #. Done
 
-[Insert photo of completed setup]
+.. figure:: ../_static/single-motor-rig-no-disc.jpg
+    :align: center
+    
+    Single motor assembly without the hand disc.
 
-Step 2. Calibrating motor
+Step 2. Set up the motor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Calibration:
-
-#. Hold the motor by the gearbox so that the rotor and shaft can move freely.
-#. Press and hold the button on the C610 motor controller until the motor starts moving and release.
+#. Calibrate: Press and hold the button on the C610 motor controller until the motor starts moving and release.
 #. Wait until the C610 motor controller restarts.
-
-[Insert gif of calibrating and setting id]
-
-Setting controller ID:
-
-#. Press the button on the C610 controller, then a little while later (half second) press the button again. The light should flash green.
+#. Set ID: Press the button on the C610 controller, then a little while later (half second) press the button again. The light should flash green.
 #. The light should now flash once every 5 seconds or so. The number of blinks indicates which ID it is. For example two blinks every 5 seconds indicates ID=2.
 
+.. raw:: html
 
-Step 3. Run bang-bang control
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/MgJmoMeYv3w" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+Step 3. Run the starter code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Open starter code using PlatformIO home page in VSCode
 #. Examine where in the code the motor angle and velocity are read. Examine where the motor is commanded.
-#. Upload starter code to Teensy
-#. Change the bang torque, ie the current command, to (blah).
+#. Upload starter code to Teensy (right arrow icon in bottom blue bar of VSCode)
+#. Open the serial monitor in VSCode (icon that looks like a plug in bottom blue bar of VSCode)
+#. Click into the serial monitor area and then press the key **s** to make the Teensy start doing things.
 
-[Insert gif of uploading code]
+.. figure:: ../_static/example-output.png
+    :align: center
+    
+    Example output from serial monitor.
 
-Step 4. Write PD position control
+Step 4. Run bang-bang control
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Uncomment the bang-bang code and upload.
+#. Observe the effects of changing the current command to something else.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/cskc04Jdz80" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+    Example bang-bang control.
+
+|
+
+Step 5. Write PD position control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Replace call to bang-bang controller with your PD controller. Use Kp = [blah] and Kd = [blah] to start. Don't forget the negative signs!
+#. Replace call to bang-bang controller with your PD controller. Use Kp = 1000.0 and Kd = 100.0 to start. Don't forget the negative signs!
 #. Upload code to Teensy
 
 [Insert gif of proper PD joint control]
 
-Step 5. Experiment with different parameters
+Step 6. Experiment with different parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Note: Some of these steps will cause the output disc to go unstable and violently shake, be prepared!
 
-#. Keeping Kd constant (blah), experiment with different Kp values from (blah) to (blah)
-#. Keeping Kp constant (blah), experiment with different Kd values from (blah) to (blah)
-#. See what happens when Kp is too high. Try Kp=[blah] and Kd=[blah].
-#. See what happens when Kd is too high. Try Kp=[blah] and Kd=[blah].
-#. See what happens when Kd is too low. Try Kp=[blah] and Kd=[blah].
+#. Keeping Kd constant (0), experiment with Kp = -10 and Kp = 5000
+#. Keeping Kp constant (1000), experiment with different Kd values from -10 to 1000
+#. See what happens when Kp is too high. Try Kp=50000 and Kd=100.
+#. See what happens when Kd is too high. Try Kp=0 and Kd=100000.
+#. See what happens with just moderate damping. Try Kp=0 and Kd=100.
+
+The expected behavior is that higher Kp values will make the position control more stiff while higher Kd values will make the motor slower to achieve the desired position.
+If either gain is too high or negative, the motor will go unstable.
 
 [Insert gif of some instability]
 
-Step 6. Experiment with different loop rates
+Step 7. Experiment with different loop rates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Examine where the code is checking if it's time to issue another control update.
-#. Change the update rate to 100Hz and use Kp=[blah] and Kd=[blah].
-#. Change the update rate to 10Hz with the same Kp and Kd. 
+#. Change the update rate to 4Hz with Kp=1000 and Kd=100 to observer instability.
 
-Step 7. Program periodic motion
+Step 8. Program periodic motion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Program the motor to track a sinusoidal position, like the psuedocode below. 
@@ -102,46 +133,34 @@ Fun fact, the maximum frequency you can go before the motor moves to only 71% of
 
 [Insert gif of sinusoidal motion]
 
-Step 8. Connect and calibrate 2 more motors
+Step 9. Connect and control 2 more motors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Connect power and encoder cables from motors to controllers.
 #. Connect power and CAN cables from controllers Pupper PCB
+#. Run your PD control on the two additional motors with some target position.
 
 [insert pic of compeleted setup]
-
-Step 9. Program periodic motion for all three motors
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. Write two more independent PD controllers for the other two motors
-#. Program a similar periodic motion for the other motors. (Or whatever you want)
-
-[insert gif of completed setup]
 
 Step 10. Assemble the three motors into a robot arm!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Attach the shoulder abductor motor to the base
-[insert pic]
-
-2. Attach the base hub to the shoulder abductor motor
-[insert pic]
-
-3. Attach the shoulder rotator motor to the base hub
-[pic]
-
-4. Attach the upper arm to the shoulder rotator motor
-[pic]
-
-5. Attach the elbow motor to the upper arm
-[pic]
-
-6. Attach the lower arm to the elbow motor
-[pic]
+[Gabrael adds assembly video]
 
 Step 11. Run your code again on the new robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[gif]
+
+#. Upload and run code for controlling the 3 motors simultaneously.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/SVwILVoCzxM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+    Example where the arm PID positions targets are set so that it stands up vertically.
+
+|
 
 Step 12. Connect three more motors to use as control dials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
