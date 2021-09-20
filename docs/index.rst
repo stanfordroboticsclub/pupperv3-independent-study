@@ -36,6 +36,6 @@ Faculty sponsor: Mac Schwager
 
     reference/design
 
-.. image:: _static/pupperpic.PNG
+.. image:: _static/pupper-hero.jpg
     :align: center
-    :alt: Pupper Jumping
+    :alt: Pupper
