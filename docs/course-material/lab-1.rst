@@ -56,7 +56,7 @@ Step 2. Set up the motor
         <iframe src="https://www.youtube.com/embed/MgJmoMeYv3w" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-*Example of calibrating the motor and setting ID=3. For this step, you should set ID=1 stead.*
+*Example of calibrating the motor and setting ID=3. For your actuator, you should set ID=1 instead.*
 
 |
 
