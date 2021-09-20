@@ -24,9 +24,10 @@ Faculty sponsor: Mac Schwager
     :maxdepth: 2
     :caption: Course material
 
-    course-material/week-1
-    course-material/week-2
-    course-material/week-3
+    course-material/lab-1
+    course-material/lab-2
+    course-material/lab-3
+    course-material/lab-4
 
 
 .. toctree::

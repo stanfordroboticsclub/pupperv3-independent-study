@@ -1,15 +1,15 @@
-Week 1
-=======
+Lab 1 - The Worst Robot Surgeon
+================================
 
 .. contents:: :depth: 2
 
-Lecture 1 - Joint Control
----------------------------
+Mini-lecture - Joint Control
+-----------------------------
 
 * Video: Available soon
 
 
-Lab 1 - The Worst Surgical Robot
+Lab Instructions
 ----------------------------------
 *Goal: Build two robot arms that mirror each other's motion.*
 
@@ -37,10 +37,10 @@ Step 1. Connecting hardware
 #. Plug the Teensy into your laptop via micro USB to USB A/C.
 #. Done
 
-.. figure:: ../_static/single-motor-rig-no-disc.jpg
+.. figure:: ../_static/nice-single-motor-rig.jpg
     :align: center
     
-    Single motor assembly without the hand disc.
+    M2006 motor connected to C610 motor controller connected to Pupper PCB. Battery and power switch connected. Teensy plugged in.
 
 Step 2. Set up the motor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -55,6 +55,10 @@ Step 2. Set up the motor
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://www.youtube.com/embed/MgJmoMeYv3w" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
+
+*Example of calibrating the motor and setting ID=3. For this step, you should set ID=1 stead.*
+
+|
 
 Step 3. Run the starter code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -82,14 +86,14 @@ Step 4. Run bang-bang control
         <iframe src="https://www.youtube.com/embed/cskc04Jdz80" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-    Example bang-bang control.
+*Example bang-bang control.*
 
 |
 
 Step 5. Write PD position control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Replace call to bang-bang controller with your PD controller. Use Kp = 1000.0 and Kd = 100.0 to start. Don't forget the negative signs!
+#. Replace call to bang-bang controller with your PD controller. Use Kp = 1000.0 and Kd = 0.0 to start. Don't forget the negative signs!
 #. Upload code to Teensy
 
 [Insert gif of proper PD joint control]
@@ -105,7 +109,7 @@ Note: Some of these steps will cause the output disc to go unstable and violentl
 #. See what happens with just moderate damping. Try Kp=0 and Kd=100.
 
 The expected behavior is that higher Kp values will make the position control more stiff while higher Kd values will make the motor slower to achieve the desired position.
-If either gain is too high or negative, the motor will go unstable.
+If either gain is too high or is negative, the motor will go unstable.
 
 [Insert gif of some instability]
 
@@ -113,7 +117,7 @@ Step 7. Experiment with different loop rates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Examine where the code is checking if it's time to issue another control update.
-#. Change the update rate to 4Hz with Kp=1000 and Kd=100 to observer instability.
+#. Change the update rate to 4Hz with Kp=1000 and Kd=100 to observe instability.
 
 Step 8. Program periodic motion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -128,7 +132,7 @@ Step 8. Program periodic motion
 2. Play around with different frequencies. How high can you raise the frequency before the motor no longer moves as much as you expect? 
 
 
-Fun fact, the maximum frequency you can go before the motor moves to only 71% of the intended motion is called the bandwidth.
+Fun fact, the maximum frequency you can go before the motor moves to only 71% (-3dB) of the intended motion is called the bandwidth.
 
 
 [Insert gif of sinusoidal motion]
@@ -147,6 +151,11 @@ Step 10. Assemble the three motors into a robot arm!
 
 [Gabrael adds assembly video]
 
+.. figure:: ../_static/built-3dof-arm.jpg
+    :align: center
+    
+    Robot arm built (yours may not have the black wire wrap).
+
 Step 11. Run your code again on the new robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -158,7 +167,7 @@ Step 11. Run your code again on the new robot arm
         <iframe src="https://www.youtube.com/embed/SVwILVoCzxM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-    Example where the arm PID positions targets are set so that it stands up vertically.
+*Example where the arm PID positions targets are set so that it stands up vertically.*
 
 |
 
@@ -173,9 +182,18 @@ Step 13. Assemble the three new motors into a robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 [pic]
 
-Step 14. Make the robot arms bidirectional!
+Step 14. Use the arms as leader and follower.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Make the leader arm motors also perform position control where the position targets are the angle readings from the former follower arm.
+#. Use the same code as in step 12.
+#. Start the robot arms from the same position.
+#. Tune Kp and Kd gains and maximum current as you like.
+
+[pic]
+
+Step 15. Make the robot arms bidirectional!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Program position control for the leader arm actuators (formerly control dial actuators)
+#. Set the position targets of the leader arm to the positions of the follower arm.
 #. Congrats. Play with your robot! Make modifications!
 
 [gif]
