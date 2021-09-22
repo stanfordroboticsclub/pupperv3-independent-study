@@ -29,13 +29,13 @@ Step 0. Setup
 Step 1. Connecting hardware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Attach the M2006 motor to the white cone via 3 M3 flat head screws.
+#. Attach the M2006 motor to the white cone via 3 M3x8mm flat head screws (M3 is the diameter, 8mm is the length, flat head means the top of the screw is flat and has a cone shape underneath.)
 #. Plug the M2006's 3-wire power cable and 4-wire ribbon encoder cable into the C610 motor controller.
-#. Plug the motor controller's 2-wire power cable into a XT30 port on the Pupper PCB and the 2-wire CAN cable into a smaller CAN port.
+#. Plug the motor controller's 2-wire power cable into a XT30 port on the PCB in the row near the Teensy.
+#. Plug in the 2-wire CAN cable into a CAN port in the row near the Teensy.
 #. Plug the Teensy into the socket on the Pupper PCB if it's not already.
 #. Plug the power supply or battery into the Pupper PCB's XT60 connector.
-#. Plug the Teensy into your laptop via micro USB to USB A/C.
-#. Done
+#. Plug the Teensy into your laptop via micro USB to USB A to C.
 
 .. figure:: ../_static/nice-single-motor-rig.jpg
     :align: center
@@ -45,6 +45,7 @@ Step 1. Connecting hardware
 Step 2. Set up the motor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+#. Turn on the system: press the power button on the PCB shield.
 #. Calibrate: Press and hold the button on the C610 motor controller until the motor starts moving and release.
 #. Wait until the C610 motor controller restarts.
 #. Set ID: Press the button on the C610 controller, then a little while later (half second) press the button again. The light should flash green.
@@ -63,11 +64,13 @@ Step 2. Set up the motor
 Step 3. Run the starter code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Open starter code using PlatformIO home page in VSCode
+#. Get the starter code: https://github.com/stanfordroboticsclub/independent-study-lab1 (instructions to download on this page)
+#. Open starter code using PlatformIO home page in VSCode (click the ant icon in the left bar, then PIO Home -> Open, then open the independent-study-lab1 folder).
 #. Examine where in the code the motor angle and velocity are read. Examine where the motor is commanded.
-#. Upload starter code to Teensy (right arrow icon in bottom blue bar of VSCode)
-#. Open the serial monitor in VSCode (icon that looks like a plug in bottom blue bar of VSCode)
-#. Click into the serial monitor area and then press the key **s** to make the Teensy start doing things.
+#. Upload starter code to Teensy (right arrow icon in blue bar of VSCode or click the ant icon, then upload)
+#. Open the serial monitor in VSCode (icon that looks like a plug in bottom bar of VSCode or click ant icon, then monitor)
+#. Click into the serial monitor area and then press the key **s** to make the Teensy start printing out the angle and velocity of the connected motor.
+#. Press **s** again to stop the program. If you want to rerun the code, upload again or unplug and replug your computer from the Teensy.
 
 .. figure:: ../_static/example-output.png
     :align: center
@@ -93,7 +96,8 @@ Step 4. Run bang-bang control
 Step 5. Write PD position control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Replace call to bang-bang controller with your PD controller. Use Kp = 1000.0 and Kd = 0.0 to start. Don't forget the negative signs!
+#. Comment out the bang-bang controller and comment in the call to the PD control. The function should return the current (100mA, 200mA etc) command.
+#. Use Kp = 1000.0 and Kd = 0.0 to start. Don't forget the negative signs! 
 #. Upload code to Teensy
 
 [Insert gif of proper PD joint control]
