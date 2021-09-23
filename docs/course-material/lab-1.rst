@@ -69,8 +69,14 @@ Step 2. Set up the motor
 Step 3. Run the starter code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Get the starter code: https://github.com/stanfordroboticsclub/independent-study-lab1 (instructions to download on this page)
-#. Open starter code using PlatformIO home page in VSCode (click the ant icon in the left bar, then PIO Home -> Open, then open the independent-study-lab1 folder).
+1. Git clone the `starter code <https://github.com/stanfordroboticsclub/independent-study-lab1>`_, open in VSCode, and upload to Teensy.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/WMEhVteT9h4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
 #. Examine where in the code the motor angle and velocity are read. Examine where the motor is commanded.
 #. Upload starter code to Teensy (right arrow icon in blue bar of VSCode or click the ant icon, then upload)
 #. Open the serial monitor in VSCode (icon that looks like a plug in bottom bar of VSCode or click ant icon, then monitor)
