@@ -6,8 +6,13 @@ Lab 1 - The Worst Robot Surgeon
 Mini-lecture - Joint Control
 -----------------------------
 
-* Video: Available soon
+.. raw:: html
 
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/GZb0ZHpmb28" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+|
 
 Lab Instructions
 ----------------------------------
