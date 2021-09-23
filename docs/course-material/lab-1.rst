@@ -23,7 +23,7 @@ Lab Instructions
 Step 0. Setup
 ^^^^^^^^^^^^^^
 #. Install `VSCode <https://code.visualstudio.com/Download>`_
-#. Install the PlatformIO extension for VSCode.
+#. Install the PlatformIO extension for VSCode. (Might take several minutes on Windows - check the bottom bar in VSCode for status)
 
 .. raw:: html
 
