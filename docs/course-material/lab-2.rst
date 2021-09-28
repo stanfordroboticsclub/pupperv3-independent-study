@@ -17,8 +17,9 @@ Step 0. Get the starter code
 
 Step 1. Implement and test a forward kinematics function
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Program a function that takes in a BLA::Matrix<3> vector of joint angles and outputs a BLA::Matrix<3> of the corresponding cartesian coordinates of the end-effector.
-#. Run the program. The code will test your kinematics code during the setup() function.
+#. Complete the forward_kinematics function inside of src/kinematics.h. You should return a BLA::Matrix<3> of the cartesian coordinates of the end-effector.
+#. Upload code.
+#. Press s to start. The starter code will first test your kinematics code and then run the main loop.
 
 Step 2. View cartesian coordinates of end effector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
