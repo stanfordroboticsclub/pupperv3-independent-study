@@ -53,8 +53,8 @@ Step 2. Set up the motor
 #. Turn on the system: press the power button on the PCB shield.
 #. Calibrate: Press and hold the button on the C610 motor controller until the motor starts moving and release.
 #. Wait until the C610 motor controller restarts.
-#. Set ID: Press the button on the C610 controller, then a little while later (half second) press the button again. The light should flash green.
-#. The light should now flash once every 5 seconds or so. The number of blinks indicates which ID it is. For example two blinks every 5 seconds indicates ID=2.
+#. Set ID: Click the button on the C610 controller, then a little while later (half second or so) press the button again. The light should flash green.
+#. The light should now flash once every 2 seconds or so. The number of blinks indicates which ID it is. For example two blinks every 2 seconds indicates ID=2.
 
 .. raw:: html
 
@@ -77,7 +77,7 @@ Step 3. Run the starter code
         <iframe src="https://www.youtube.com/embed/WMEhVteT9h4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-#. Examine where in the code the motor angle and velocity are read. Examine where the motor is commanded.
+#. Examine where in the code the motor angle and velocity are read in *src/main.cpp*. Examine where the motor is commanded.
 #. Upload starter code to Teensy (right arrow icon in blue bar of VSCode or click the ant icon, then upload)
 #. Open the serial monitor in VSCode (icon that looks like a plug in bottom bar of VSCode or click ant icon, then monitor)
 #. Click into the serial monitor area and then press the key **s** to make the Teensy start printing out the angle and velocity of the connected motor.
@@ -91,7 +91,7 @@ Step 3. Run the starter code
 Step 4. Run bang-bang control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Uncomment the bang-bang code and upload.
+#. Uncomment the bang-bang code in *src/main.cpp* and upload.
 #. Observe the effects of changing the current command to something else.
 
 .. raw:: html
@@ -107,15 +107,19 @@ Step 4. Run bang-bang control
 Step 5. Write PD position control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Comment out the bang-bang controller and comment in the call to the PD control. The function should return the current (100mA, 200mA etc) command.
+#. Comment out the bang-bang controller.
+#. Complete the pd_control function in *src/main.cpp*. Your function should return a current command (100mA, 200mA etc) using the PD control law *tau = -Kp \* theta - Kd \* omega*.
 #. Use Kp = 1000.0 and Kd = 0.0 to start. Don't forget the negative signs! 
 #. Upload code to Teensy
+#. Play around with the disc. What happens when you rotate the disc just a little bit away from the target position? What happens when you rotate it a lot away from the target position? Do you feel the motor torque increase and then flatten out as you rotate the disc?
 
 [Insert gif of proper PD joint control]
 
 Step 6. Experiment with different parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Note: Some of these steps will cause the output disc to go unstable and violently shake, be prepared!
+
+For each of these situations (except the ones that go unstable), rotate the disc around with your hand to get a physical sense for the PD behavior.
 
 #. Keeping Kd constant (0), experiment with Kp = -10 and Kp = 5000
 #. Keeping Kp constant (1000), experiment with different Kd values from -10 to 1000
