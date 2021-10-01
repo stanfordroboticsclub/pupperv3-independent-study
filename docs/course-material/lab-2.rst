@@ -71,6 +71,7 @@ Step 3. Make a safety box
 Step 4. Do the `safety dance <https://youtu.be/AjPau5QYtYs>`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Make a function to vibrate the motors (high frequency, low amplitude torque command sinusoid) 
+#. If you program a torque sinusoid, a safe range for the amplitude is around 500 - 4000mA. Any lower is barely perceptible.
 #. Run the function whenever the robot end effector leaves the safety box.
 
 [gif of completed project]
