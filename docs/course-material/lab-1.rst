@@ -160,13 +160,16 @@ Step 9. Connect and control 2 more motors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Connect power and encoder cables from motors to controllers.
-#. Connect power and CAN cables from controllers Pupper PCB
+#. Connect power and CAN cables from controllers to Pupper PCB. Make sure the CAN cables go into the same row (row near the Teensy).
+#. Set the new motor controllers to have different IDs. We use 1, 2, and 3.
 #. Run your PD control on the two additional motors with some target position.
 
 [insert pic of compeleted setup]
 
 Step 10. Assemble the three motors into a robot arm!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. We like to insert a screw driver with a 3mm diameter shank into the 3D printed part hole and then into the hole in the shaft to align them before inserting the bolt.
 
 [Gabrael adds assembly video]
 
@@ -192,8 +195,10 @@ Step 11. Run your code again on the new robot arm
 
 Step 12. Connect three more motors to use as control dials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Calibrate and connet three additional motors to the Pupper PCB
-#. Set the target positions of the shoulder abductor motor, shoulder rotator motor, and elbow motor to the angle readings of the first, second, and third new motors respectively.
+#. Connect three additional motors to the same CAN bus (ie same row of connectors).
+#. Calibrate and connect three additional motors to the Pupper PCB.
+#. Set their IDs to not overlap with your existing motors. We use 4, 5, and 6.
+#. Set the target positions of the base motor, shoulder motor, and elbow motor to the angle readings of the first, second, and third new motors respectively.
 
 [gif]
 
@@ -213,6 +218,7 @@ Step 15. Make the robot arms bidirectional!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Program position control for the leader arm actuators (formerly control dial actuators)
 #. Set the position targets of the leader arm to the positions of the follower arm.
+#. Assuming the leader arm has controller IDs 1, 2 and 3, and the follower arm has controller IDs 4, 5 and 6, you can send current (ie torque) commands to the new robot arm with the code *bus.CommandTorques(m0_current, m1_current, m2_current, m3_current, C610Subbus::kOneToFourBlinks); bus.CommandTorques(m4_current, m5_current, 0, 0, C610Subbus::kFiveToEightBlinks);*
 #. Congrats. Play with your robot! Make modifications!
 
 [gif]
