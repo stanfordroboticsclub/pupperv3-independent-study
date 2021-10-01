@@ -218,7 +218,7 @@ Step 15. Make the robot arms bidirectional!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Program position control for the leader arm actuators (formerly control dial actuators)
 #. Set the position targets of the leader arm to the positions of the follower arm.
-#. Assuming the leader arm has controller IDs 1, 2 and 3, and the follower arm has controller IDs 4, 5 and 6, you can send current (ie torque) commands to the new robot arm with the code *bus.CommandTorques(m0_current, m1_current, m2_current, m3_current, C610Subbus::kOneToFourBlinks); bus.CommandTorques(m4_current, m5_current, 0, 0, C610Subbus::kFiveToEightBlinks);*
+#. Assuming the leader arm has controller IDs 1, 2 and 3, and the follower arm has controller IDs 4, 5 and 6, you can send current (ie torque) commands to the robot arms with the code *bus.CommandTorques(m0_current, m1_current, m2_current, m3_current, C610Subbus::kOneToFourBlinks); bus.CommandTorques(m4_current, m5_current, 0, 0, C610Subbus::kFiveToEightBlinks);*
 #. Congrats. Play with your robot! Make modifications!
 
 [gif]
