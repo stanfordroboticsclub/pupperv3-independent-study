@@ -35,6 +35,7 @@ Faculty sponsor: Mac Schwager
     :caption: References
 
     reference/design
+    reference/libraries
 
 .. image:: _static/pupper-hero.jpg
     :align: center
