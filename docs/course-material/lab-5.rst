@@ -18,7 +18,7 @@ Step 2. Bulkhead assembly
 #. Attach 2 motors, one into each side of motor bulkhead
 #. Attach left and right legs to the shafts of the motors you just installed
 
-Step 1. Electronic assembly
+Step 3. Electronic assembly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Connect motor controllers to motors
 #. Calibrate motor controllers 
@@ -29,15 +29,15 @@ Step 1. Electronic assembly
 #. Put wire wrap around motor controller cables
 #. Zip-tie wire wraps and cables to the motor bulkheads
 
-Step 1. Raspberry Pi assembly
+Step 4. Raspberry Pi assembly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Solder pin headers to IMU board
 #. Plug in IMU into bottom PCB with Sparkfun text facing towards the Teensy USB
 #. Screw RPi into electronics bulkhead with M2.5x5 socket head screws such that the Pi is about symmetric on the electronics bulkhead
 #. Connect USB C extension cable to Rpi so the cable goes under the RPi
-#. Mount electronics bulkhead into the bottom PCB with M3x6 button head screws.
-#. Connect RPi to power by using 2-pin cable. Connect one end into pins behind Teensy and other side into Teensy [insert diagram. can easily fry RPi if done incorrectly]
 #. Connect RPi camera flex cable into RPi
+#. Mount electronics bulkhead into the bottom PCB with M3x6 button head screws.
+#. Connect RPi to power by using 2-pin cable. Connect one end into 5V, GND pins near the Teensy and other side into RPi. Quadruple-check that the 5V and GND pins are going the right places.
 #. Mount RPi camera with 4x M2x3 screws to front cowling such that flex cable goes up
 #. Connect RPi to Teensy using micro usb cable
 #. Connect RC receiver to RPi with usb extension cable
@@ -46,6 +46,10 @@ Step 1. Raspberry Pi assembly
 #. Connect other female XT60 into the bottom PCB
 #. Insert JST-XH extender balance cable into 3D printed power hub.
 
+.. figure:: ../_static/rpi-pinout.png
+    :align: center
+    
+    RPi pinout. 
 
 .. figure:: ../_static/djipupper_photos/IMG_0880.jpg
     :align: center
