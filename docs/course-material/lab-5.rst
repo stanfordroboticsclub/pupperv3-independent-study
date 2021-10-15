@@ -35,7 +35,7 @@ Step 1. Raspberry Pi assembly
 #. Plug in IMU into bottom PCB with Sparkfun text facing towards the Teensy USB
 #. Screw RPi into electronics bulkhead with M2.5x5 socket head screws such that the Pi is about symmetric on the electronics bulkhead
 #. Connect USB C extension cable to Rpi so the cable goes under the RPi
-#. Mount electronics bulkhead into the bottom PCB
+#. Mount electronics bulkhead into the bottom PCB with M3x6 button head screws.
 #. Connect RPi to power by using 2-pin cable. Connect one end into pins behind Teensy and other side into Teensy [insert diagram. can easily fry RPi if done incorrectly]
 #. Connect RPi camera flex cable into RPi
 #. Mount RPi camera with 4x M2x3 screws to front cowling such that flex cable goes up
@@ -45,6 +45,39 @@ Step 1. Raspberry Pi assembly
 #. Insert XT60 female side (conductor is a circular slot) of XT60 splitter cable into 3D printed power hub. 
 #. Connect other female XT60 into the bottom PCB
 #. Insert JST-XH extender balance cable into 3D printed power hub.
+
+
+.. figure:: ../_static/djipupper_photos/IMG_0880.jpg
+    :align: center
+    
+    Bulkhead wiring.
+
+.. figure:: ../_static/djipupper_photos/IMG_0881.jpg
+    :align: center
+    
+    Zip-tie close up.
+
+.. figure:: ../_static/djipupper_photos/IMG_0882.jpg
+    :align: center
+    
+    Leg assembly.
+
+.. figure:: ../_static/djipupper_photos/IMG_0883.jpg
+    :align: center
+    
+    Electronics assembly.
+
+.. figure:: ../_static/djipupper_photos/IMG_0884.jpg
+    :align: center
+    
+    Bottom view of top PCB.
+
+.. figure:: ../_static/djipupper_photos/IMG_0885.jpg
+    :align: center
+    
+    Top view of top PCB.
+
+    
 
 
 Resources
