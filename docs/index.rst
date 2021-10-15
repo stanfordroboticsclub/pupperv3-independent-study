@@ -28,7 +28,7 @@ Faculty sponsor: Mac Schwager
     course-material/lab-2
     course-material/lab-3
     course-material/lab-4
-
+    course-material/lab-5
 
 .. toctree::
     :maxdepth: 1
