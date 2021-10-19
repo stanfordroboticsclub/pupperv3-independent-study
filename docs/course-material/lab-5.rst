@@ -29,22 +29,39 @@ Step 3. Electronic assembly
 #. Put wire wrap around motor controller cables
 #. Zip-tie wire wraps and cables to the motor bulkheads
 
-Step 4. Raspberry Pi assembly
+Step 4. IMU prep
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Solder pin headers to IMU board
+#. Break off two 1x6 male header rows.
+#. Place them on the *top* side of the IMU board (side with black connectors and the middle chip)
+#. Insert the IMU with headers into a breadboard to help you solder the headers to the IMU
+#. Solder the headers to the IMU
+
+[insert picture here]
+
+Step 5. Unmounted Raspberry Pi assembly
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Plug in IMU into bottom PCB with Sparkfun text facing towards the Teensy USB
-#. Screw RPi into electronics bulkhead with M2.5x5 socket head screws such that the Pi is about symmetric on the electronics bulkhead
-#. Connect USB C extension cable to Rpi so the cable goes under the RPi
-#. Connect RPi camera flex cable into RPi
-#. Mount electronics bulkhead into the bottom PCB with M3x6 button head screws.
-#. Connect RPi to power by using 2-pin cable. Connect one end into 5V, GND pins near the Teensy and other side into RPi. Quadruple-check that the 5V and GND pins are going the right places.
-#. Mount RPi camera with 4x M2x3 screws to front cowling such that flex cable goes up
-#. Connect RPi to Teensy using micro usb cable
-#. Connect RC receiver to RPi with usb extension cable
-#. Screw USB-C connector to the top PCB with M3x6 button head screws
-#. Insert XT60 female side (conductor is a circular slot) of XT60 splitter cable into 3D printed power hub. 
+#. Screw RPi into electronics bulkhead with M2.5x5 socket head screws such that the Pi is about centered on the electronics bulkhead
+#. Connect USB C extension cable to Rpi
+#. Connect RPi camera flex cable into RPi. There's a little grey flap that flips up on the connector that lets you slide the cable in. Flip the flap down to lock the cable in.
+
+Step 6. Mounted Raspberry Pi assembly
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Mount electronics bulkhead into the bottom PCB with two M3x6 button head screws.
+#. Connect RPi to power by using 2-pin cable. Connect one end into 5V, GND pins near the Teensy and other side into RPi. Quadruple-check that the 5V and GND pins are going the right places. See diagram below.
+#. Mount RPi camera with 4x M2x3 screws to front cowling such that flex cable goes up. The screws thread into the plastic and may be tough to thread.
+#. Connect RPi to Teensy using USB A to USB micro cable
+#. Connect RC receiver to RPi with ribbon cable usb extension cable. The connectors have gray flaps that slide in/out to lock/unlock the cable.
+
+Step 7. Top panel assembly
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Screw the USB-C connector to the top PCB with M3x6 button head screws
+#. Insert the XT60 female side (conductor is a circular slot) of XT60 splitter cable into 3D printed power hub. 
 #. Connect other female XT60 into the bottom PCB
 #. Insert JST-XH extender balance cable into 3D printed power hub.
+#. Take the large nut off the power switch and then mount the power switch to the top PCB panel. Then secure the switch by threading on the nut from the bottom of the top panel.
+#. Compare your build to the finished robot to see if you missed anything.
+#. Verify your build so far with the class instructors and the photos below.
 
 .. figure:: ../_static/rpi-pinout.png
     :align: center
@@ -81,7 +98,26 @@ Step 4. Raspberry Pi assembly
     
     Top view of top PCB.
 
-    
+
+Step 7. Finish hardware assembly
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Put velcro or dual-lock onto the bottom PCB where it says "battery". For now we'll use the power supply to run the robot so you don't have to install the actual battery.
+#. Attach the top PCB panel with M3x6 button head screws. 
+#. Check again with instructors.
+#. Marvel at your work!
+
+Step 7. Running the robot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Get a micro SD card with our software image. Slide it into the Raspberry Pi
+#. Power on the robot by hooking up the power supply's female XT60 (slots) to the bottom PCB's male XT60 (prongs).
+#. Turn on the RC transmitter by pressing the power button until it turns blue. [TODO verify this is the case]
+#. Wait ~30s for the RPi to boot and then flip the the switches [... TODO find out how to flip the switches]
+#. Play with the robot! Top right switch flips between trotting and standing. Left/right on the left joystick controls turning. Up/down on the right joystick controls forward/back. Left/right on the right joystick controls strafing left/right.
+
+Step 7. Accessing the robot brain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Connect the robot to your computer via the top USB-C port on the robot.
+#. SSH into the robot with `ssh pi@raspberrypi.local`. Ask for help if this doesn't work.
 
 
 Resources
