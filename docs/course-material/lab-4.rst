@@ -59,3 +59,10 @@ Expected result:
     :align: center
     
     Expected output from ``python3 run_djipupper_sim.py``.
+
+
+Step 4. Experiment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Try changing ``self.overlap_time`` (line 52) in ``StanfordQuadruped/djipupper/Config.py``. This controls the amount of time in which all four legs are on the ground for the trot.
+#. Try changing ``self.swing_time`` (line 53) in ``StanfordQuadruped/djipupper/Config.py``. This controls the amount of time in which just two legs are on the ground for the trot.
+#. Mess around with other things [tbd]
