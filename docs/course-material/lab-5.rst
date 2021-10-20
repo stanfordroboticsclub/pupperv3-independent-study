@@ -53,6 +53,10 @@ Step 6. Mounted Raspberry Pi assembly
 #. Connect RPi to Teensy using USB A to USB micro cable
 #. Connect RC receiver to RPi with ribbon cable usb extension cable. The connectors have gray flaps that slide in/out to lock/unlock the cable.
 
+Step 6.5. Bind RC receiver
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Bind the receiver [TODO: add instructions]
+
 Step 7. Top panel assembly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Screw the USB-C connector to the top PCB with M3x6 button head screws
@@ -105,6 +109,11 @@ Step 7. Finish hardware assembly
 #. Attach the top PCB panel with M3x6 button head screws. 
 #. Check again with instructors.
 #. Marvel at your work!
+
+Step 8. Flash code onto the Teensy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. ``git clone https://github.com/Nate711/DJIPupperTests.git``
+#. Use VSCode PlatformIO to open the DJIPupperTests folder and then upload the code to the Teensy
 
 Step 7. Running the robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
