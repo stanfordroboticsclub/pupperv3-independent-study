@@ -16,7 +16,7 @@ These instructions assume you are running mac or linux. If you have Windows 10 o
 
 Step 1. Set up simulation environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Clone the simulator repository ``git clone https://github.com/Nate711/puppersim.git``
+#. Clone the simulator repository ``git clone https://github.com/jietan/puppersim.git``
 #. Go into the repo: ``cd puppersim``
 #. Set up the repo with ``python3 setup.py develop``. Use ``python`` if ``python3`` doesn't work.
 #. If you read the readme, you'll notice it says to use code from StanfordQuadruped. We're going to use our own fork so skip that step in the readme and instead go to step 2.
