@@ -34,6 +34,7 @@ Faculty sponsor: Mac Schwager
     :maxdepth: 1
     :caption: References
 
+    reference/rpi-reference
     reference/design
     reference/libraries
 
