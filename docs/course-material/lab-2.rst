@@ -1,84 +1,77 @@
-Lab 2 - Safety Dance
-====================
+Lab 2 - The Worst Robot Surgeon
+================================
 
 .. contents:: :depth: 2
 
-Mini-lecture - Forward Kinematics
-------------------------------------
+Lab Instructions
+----------------------------------
+*Goal: Build two robot arms that mirror each other's motion.*
+
+[Insert GIF of completed robot arms]
+
+Step 1. Connect and control 2 more motors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Connect power and encoder cables from motors to controllers.
+#. Connect power and CAN cables from controllers to Pupper PCB. Make sure the CAN cables go into the same row (row near the Teensy).
+#. Set the new motor controllers to have different IDs. We use 1, 2, and 3.
+#. Run your PD control on the two additional motors with some target position.
+
+[insert pic of compeleted setup]
+
+Step 2. Assemble the three motors into a robot arm!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. We like to insert a screw driver with a 3mm diameter shank into the 3D printed part hole and then into the hole in the shaft to align them before inserting the bolt.
+
+[Gabrael adds assembly video]
+
+.. figure:: ../_static/built-3dof-arm.jpg
+    :align: center
+    
+    Robot arm built (yours may not have the black wire wrap).
+
+Step 3. Run your code again on the new robot arm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Upload and run code for controlling the 3 motors simultaneously.
 
 .. raw:: html
 
-    <iframe src="https://stanford195.autodesk360.com/shares/public/SH35dfcQT936092f0e43e4b3d19bbaacc90a?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
-    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/SVwILVoCzxM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
-*3D illustration of motor angles, directions of positive rotation, and relevant geometry.*
+*Example where the arm PID positions targets are set so that it stands up vertically.*
 
-.. figure:: ../_static/kinematics/kinematics.002.png
-    :align: center
-    
-    Problem statement.
+|
 
+Step 4. Connect three more motors to use as control dials
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Connect three additional motors to the same CAN bus (ie same row of connectors).
+#. Calibrate and connect three additional motors to the Pupper PCB.
+#. Set their IDs to not overlap with your existing motors. We use 4, 5, and 6.
+#. Set the target positions of the base motor, shoulder motor, and elbow motor to the angle readings of the first, second, and third new motors respectively.
 
-.. figure:: ../_static/kinematics/kinematics.003.png
-    :align: center
-    
-    Coordinate frame, link lengths, and leg origin illustration.
+[gif]
 
+Step 5. Assemble the three new motors into a robot arm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[pic]
 
-.. figure:: ../_static/kinematics/kinematics.004.png
-    :align: center
-    
-    Derivation of x coordinate of foot and L.
+Step 6. Use the arms as leader and follower.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Use the same code as in step 12.
+#. Start the robot arms from the same position.
+#. Tune Kp and Kd gains and maximum current as you like.
 
+[pic]
 
-.. figure:: ../_static/kinematics/kinematics.005.png
-    :align: center
-    
-    Derivation of y and z coordinate of foot.
+Step 7. Make the robot arms bidirectional!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Program position control for the leader arm actuators (formerly control dial actuators)
+#. Set the position targets of the leader arm to the positions of the follower arm.
+#. Assuming the leader arm has controller IDs 1, 2 and 3, and the follower arm has controller IDs 4, 5 and 6, you can send current (ie torque) commands to the robot arms with the code *bus.CommandTorques(m0_current, m1_current, m2_current, m3_current, C610Subbus::kOneToFourBlinks); bus.CommandTorques(m4_current, m5_current, 0, 0, C610Subbus::kFiveToEightBlinks);*
+#. Congrats. Play with your robot! Make modifications!
 
-
-Lab Instructions
-------------------
-
-Step 0. Get the starter code
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Get the starter code https://github.com/stanfordroboticsclub/independent-study-lab2
-#. Make sure to follow the installation instructions for the repo.
-
-Step 1. Prepare hardware
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Set the controller for the base actuactor of the robot arm to 1 (1 blink). 
-#. Set the controller for the shoulder actuactor of the robot arm to 2 (2 blinks). 
-#. Set the controller for the elbow actuactor of the robot arm to 3 (3 blinks).
-#. Make sure all the motor controllers are plugged into the CAN 2 bus (the set of connectors near the Teensy).
-
-Step 1. Implement and test a forward kinematics function
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Determine if you have a right or left robot leg (there's a L or R on the lower link). 
-#. Update line 15 of *src/main.cpp* based on the what side leg you have.
-#. Complete the forward_kinematics function inside of src/kinematics.h. You should return a BLA::Matrix<3> of the cartesian coordinates of the end-effector.
-#. Upload code.
-#. Press s to start. The starter code will first test your kinematics code and then run the main loop.
-
-Step 2. View cartesian coordinates of end effector
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Start the robot from the zero position. See picture below
-#. Print out the cartesian coordinates of the end effector using your forward kinematics function
-
-.. figure:: ../_static/horizontal-config.png
-    :align: center
-    
-    A left robot arm in the starting position for lab 2 and its coordinate system.
-
-Step 3. Make a safety box
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Pick a "safety" box -- a virtual box in cartesian coordinates that the robot can operate safely in. For example, -0.1<x<0.1 and -.1<y>0.1 and 0<z<-0.2.
-#. Print a warning whenever the robot leaves the safety box.
-
-Step 4. Do the `safety dance <https://youtu.be/AjPau5QYtYs>`_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Make a function to vibrate the motors (high frequency, low amplitude torque command sinusoid) 
-#. If you program a torque sinusoid, a safe range for the amplitude is around 500 - 4000mA. Any lower is barely perceptible.
-#. Run the function whenever the robot end effector leaves the safety box.
-
-[gif of completed project]
+[gif]

@@ -1,10 +1,18 @@
-Lab 4 - Virtual Twin 
-======================
+Lab 4 - Drawbot
+================
 
 .. contents:: :depth: 2
 
-Mini-lecture - TBD
----------------------------------
+Mini-lecture - Inverse Kinematics
+----------------------------------
+
+.. raw:: html
+
+    <iframe src="https://stanford195.autodesk360.com/shares/public/SH35dfcQT936092f0e43e4b3d19bbaacc90a?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+    
+
+*3D illustration of motor angles, directions of positive rotation, and relevant geometry.*
+
 
 * Video: Available soon
 
@@ -12,57 +20,24 @@ Mini-lecture - TBD
 Lab instructions
 -------------------
 
-These instructions assume you are running mac or linux. If you have Windows 10 or lower, I recommend dual-booting linux. If you have Windows 11, try using the Windows Linux Subsystem
-
-Step 1. Set up simulation environment
+Step 1. Implement and test a inverse kinematics function
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Clone the simulator repository ``git clone https://github.com/jietan/puppersim.git``
-#. Go into the repo: ``cd puppersim``
-#. Set up the repo with ``python3 setup.py develop``. Use ``python`` if ``python3`` doesn't work.
-#. If you read the readme, you'll notice it says to use code from StanfordQuadruped. We're going to use our own fork so skip that step in the readme and instead go to step 2.
+#. Program a function that takes in a BLA::Matrix<3> vector of the desired cartesian coordinates and outputs a BLA::Matrix<3> of the corresponding joint angles.
+#. Test function in Platformio against our test data [todo. figure out platformio tests]
 
+Step 2. Check against forward kinematics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Come up with some reasonable (i.e. leg configurations you might see on the robot) cartesian end-effector positions
+#. Pass those positions to your inverse kinematics function to get joint angles
+#. Sanity check the joint angles yourself
+#. Pass those joint angles into your forward kinematics function to get predicted cartesian position
+#. Check the predicted cartesian position against the cartesian positions you started with
+#. If they don't match, but you think your code is correct, think about if your initial cartesian point is compatible with how we derived the inverse kinematics.
+#. Remember that for every cartesian point in space, there are two sets of joint angles that will you get there. However, we programmed our inverse kinematics to find a specific one.
 
-Step 2. Set up robot control code
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Open terminal and navigate to a directory where you want to put Pupper-related code
-#. Clone the robot control logic repository ``git clone https://github.com/stanfordroboticsclub/StanfordQuadruped``
-#. Go into the repo: ``cd StanfordQuadruped``
-#. Checkout the dji branch ``git checkout dji``
-#. Install dependencies ``pip3 install numpy transforms3d pyserial``. Use ``pip`` if ``pip3`` doesn't work.
-
-Step 3. Try out the simulator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. In the ``puppersim`` folder, run ``python3 puppersim/pupper_server.py``.
-#. In another terminal tab/window, go to the ``StanfordQuadruped`` folder and run ``python3 run_djipupper_sim.py``.
-#. Check out these keyboard controls: 
-    * wasd: left joystick         --> moves robot forward/back left/right.
-    * arrow keys: right joystick  --> turns robot left/right
-    * q: L1                       --> activates robot
-    * e: R1                       --> starts trotting
-    * ijkl: d-pad                 --> tilts robot
-    * x: X                        --> nothing
-    * square: u                   --> nothing
-    * triangle: t                 --> nothing
-    * circle: c                   --> nothing
-#. To activate the robot, press ``q``. To start trotting, press ``e``.
-#. Enjoy the simulator!
-#. To close the simulator, do not press use the usual close button in the top left of the simulator window. Instead do Ctrl-C in both terminal tabs/windows.
-
-Expected result:
-
-.. figure:: ../_static/lab4/sim.png
-    :align: center
-    
-    Expected simulator window.
-    
-.. figure:: ../_static/lab4/terminal.png
-    :align: center
-    
-    Expected output from ``python3 run_djipupper_sim.py``.
-
-
-Step 4. Experiment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Try changing ``self.overlap_time`` (line 52) in ``StanfordQuadruped/djipupper/Config.py``. This controls the amount of time in which all four legs are on the ground for the trot.
-#. Try changing ``self.swing_time`` (line 53) in ``StanfordQuadruped/djipupper/Config.py``. This controls the amount of time in which just two legs are on the ground for the trot.
-#. Mess around with other things [tbd]
+Step 3. Program a drawing pattern
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Come up with an easy shape to draw (lines, circles, etc)
+#. Program a function that maps time to where, in cartesian coordiantes, the pen should be to draw that shape
+#. Dry-run the drawing function by printout out the coordinates and joint angles without commanding the actuators.
+#. Do it for real.
