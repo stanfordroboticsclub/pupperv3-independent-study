@@ -103,30 +103,43 @@ Step 7. Top panel assembly
     Top view of top PCB.
 
 
-Step 7. Finish hardware assembly
+Step 8. Finish hardware assembly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Put velcro or dual-lock onto the bottom PCB where it says "battery". For now we'll use the power supply to run the robot so you don't have to install the actual battery.
 #. Attach the top PCB panel with M3x6 button head screws. 
 #. Check again with instructors.
 #. Marvel at your work!
 
-Step 8. Flash code onto the Teensy
+Step 9. Flash code onto the Teensy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. ``git clone https://github.com/Nate711/DJIPupperTests.git``
-#. Use VSCode PlatformIO to open the DJIPupperTests folder and then upload the code to the Teensy
+#. Use VSCode PlatformIO to open the DJIPupperTests folder as a project and then upload the code to the Teensy. (Same thing as in labs 1-4).
 
-Step 7. Running the robot
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Get a micro SD card with our software image. Slide it into the Raspberry Pi
-#. Power on the robot by hooking up the power supply's female XT60 (slots) to the bottom PCB's male XT60 (prongs).
-#. Turn on the RC transmitter by pressing the power button until it turns blue. [TODO verify this is the case]
-#. Wait ~30s for the RPi to boot and then flip the the switches [... TODO find out how to flip the switches]
-#. Play with the robot! Top right switch flips between trotting and standing. Left/right on the left joystick controls turning. Up/down on the right joystick controls forward/back. Left/right on the right joystick controls strafing left/right.
+Step 10. Flash software image onto Raspberry Pi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Download our `image <https://drive.google.com/file/d/1LWupKrq-aiqHTXsXZ3rIQzXBHl4DCbSj/view?usp=sharing>`_
+#. Install `Balena etcher <https://www.balena.io/etcher/>`_
+#. Flash the image onto the micro SD card using Balena etcher. 
+#. Insert the micro sd card into the Pi's micro sd card slot (on bottom side of board)
 
-Step 7. Accessing the robot brain
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step 11. Enable the heuristic controller
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Connect the robot to your computer via the top USB-C port on the robot.
-#. SSH into the robot with `ssh pi@raspberrypi.local`. Ask for help if this doesn't work.
+#. SSH into the robot with ``ssh pi@raspberrypi.local``. The password is ``raspberry``. Ask for help if this doesn't work.
+#. Run ``sudo systemctl enable --now robot`` to turn on the heuristic controller.
+#. Run ``sudo systemctl status robot`` to check that the service is running ok (should be green).
+#. Reboot with ``sudo reboot 0``
+
+Step 12. Take your robot on a walk
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Unplug the Pi from USB C.
+#. Power on the robot by hooking up the power supply to the bottom PCB (like you've done in labs).
+#. Flip all switches on the back RC transmitter down so they're away from you.
+#. Turn on the RC transmitter by pressing the middle power button and moving the left joystick up and down until the light turns blue.
+#. Wait ~30s for the RPi to boot (the green light should stop blinking).
+#. Flip the lower left switch on the controller up to enable the robot. It'll move!
+#. Flip the lower right switch on the controller up to start the robot trotting.
+#. Enjoy your hard work and play with Pupper! The top right switch flips between trotting and walking. Left/right on the left joystick controls turning. Up/down on the right joystick controls forward/back. Left/right on the right joystick controls strafing left/right.
 
 
 Resources
