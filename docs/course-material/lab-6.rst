@@ -12,22 +12,31 @@ Step 1. Leg Assembly
 #. Assemble 2 left legs
 #. Assemble 2 right legs
 
+**TODO** add assembly videos
+
 Step 2. Bulkhead assembly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Insert end stop pins into motor bulkhead
 #. Attach 2 motors, one into each side of motor bulkhead
 #. Attach left and right legs to the shafts of the motors you just installed
 
+**TODO** add assembly videos
+
 Step 3. Electronic assembly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Connect motor controllers to motors
-#. Calibrate motor controllers 
-#. Set IDs on motor controllers. 
+#. Calibrate motor controllers **TODO** Add video
+#. Set IDs on motor controllers.   **TODO** Add video
 #. Label the motor controllers and motor connector cables with the IDs in case you unplug them later.
 #. Connect motor controller power cables and CAN connectors to bottom PCB
 #. Insert motor controllers into slots
 #. Put wire wrap around motor controller cables
 #. Zip-tie wire wraps and cables to the motor bulkheads
+
+.. figure:: ../_static/djipupper_photos/esc-ids.png
+    :align: center
+    
+    Motor controller ids.
 
 Step 4. IMU prep
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -133,14 +142,26 @@ Step 11. Enable the heuristic controller
 Step 12. Take your robot on a walk
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Unplug the Pi from USB C.
+#. Place your robot on a flat, level surface. Position the legs as shown in the picture below.
 #. Power on the robot by hooking up the power supply to the bottom PCB (like you've done in labs).
+#. Connect the Pi with USB C to your computer.
+#. Wait for the robot to complete the calibration sequence. **TODO** Add calibration video
 #. Flip all switches on the back RC transmitter down so they're away from you.
 #. Turn on the RC transmitter by pressing the middle power button and moving the left joystick up and down until the light turns blue.
 #. Wait ~30s for the RPi to boot (the green light should stop blinking).
 #. Flip the lower left switch on the controller up to enable the robot. It'll move!
 #. Flip the lower right switch on the controller up to start the robot trotting.
-#. Enjoy your hard work and play with Pupper! The top right switch flips between trotting and walking. Left/right on the left joystick controls turning. Up/down on the right joystick controls forward/back. Left/right on the right joystick controls strafing left/right.
+#. Enjoy your hard work and play with Pupper! 
 
+  * The top right switch flips between trotting and walking. 
+  * Left/right on the left joystick controls turning. 
+  * Up/down on the right joystick controls forward/back. 
+  * Left/right on the right joystick controls strafing left/right.
+
+.. figure:: ../_static/djipupper_photos/startup-position.png
+    :align: center
+    
+    Startup position.
 
 Resources
 -----------
