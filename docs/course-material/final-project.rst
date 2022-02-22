@@ -11,22 +11,44 @@ In teams of 3 to 6, you will scope and complete a project of your choice using t
 Project requirements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Reproducable for future teams
-* Focused on the real robot (no simulation-only projects since you will learn much less)
+* **Do something your whole team will enjoy!** -- keep in mind that team members will be coming from different backgrounds and you won't want to leave anyone out!
+* **Focus your project on the real robot as much as possible** -- you will have a live demonstration at the end of the course
+* **Make your project reproducible** -- make sure your work will be reproducible for future teams
 
-Project recommendations
+Tips
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Expect everything to take 3 times the as long as you think. For example, your team will likely not be able to implement MPC or RMA from scratch in the time allotted.
-* Get some code of your code running on the robot within two weeks of beginning your project. You will find the real robot is more interesting and complicated than the simulated robot.
+* Get some code running on the robot within the **first two weeks** of your project. You will find the real robot is more interesting and **much more complicated** than the simulated robot.
+* Please expect everything to take 3 times the as long as you think. For example, your team will likely not be able to implement MPC or RMA from scratch in the time allotted.
 
 Deliverables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Project proposal
+
+  * 1 - 3 slides illustrating your intended work
+  * We will help you scope appropriately
+
 * Midway update / request for help 
-* GitHub repository
+
+  * Progress update for the teaching team so we can help you as best as possible
+
 * Final presentation
+
+  * 5 - 10 minute oral presentation about your project
+    
+    * Project motivation
+    * Approach
+    * Results
+    * Lessons learned / reflections (!)
+    * Class feedback (!)
+  * Live robot demonstration
+  * 5 mins Q & A
+
+* Report + Github repository
+
+  * In your github README include a 500 - 1500 word version of your presentation that covers the same points 
+  * Also include instructions that are detailed enough for other groups to reproduce your results
 
 Previous projects
 ----------------------------------
