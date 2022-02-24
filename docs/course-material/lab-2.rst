@@ -1,4 +1,4 @@
-Lab 2 - The Worst Robot Surgeon
+Lab 2 - Bad Robot Surgeon
 ================================
 
 .. contents:: :depth: 2
