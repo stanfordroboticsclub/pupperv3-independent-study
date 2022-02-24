@@ -7,7 +7,7 @@ Lab Instructions
 ----------------------------------
 *Goal: Build two robot arms that mirror each other's motion.*
 
-[Insert GIF of completed robot arms]
+[TODO: Insert GIF of completed robot arms]
 
 Step 1. Connect and control 2 more motors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -17,14 +17,14 @@ Step 1. Connect and control 2 more motors
 #. Set the new motor controllers to have different IDs. We use 1, 2, and 3.
 #. Run your PD control on the two additional motors with some target position.
 
-[insert pic of compeleted setup]
+[TODO: insert pic of compeleted setup]
 
 Step 2. Assemble the three motors into a robot arm!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. We like to insert a screw driver with a 3mm diameter shank into the 3D printed part hole and then into the hole in the shaft to align them before inserting the bolt.
 
-[Gabrael adds assembly video]
+[TODO: Gabrael adds assembly video]
 
 .. figure:: ../_static/built-3dof-arm.jpg
     :align: center
@@ -53,11 +53,11 @@ Step 4. Connect three more motors to use as control dials
 #. Set their IDs to not overlap with your existing motors. We use 4, 5, and 6.
 #. Set the target positions of the base motor, shoulder motor, and elbow motor to the angle readings of the first, second, and third new motors respectively.
 
-[gif]
+[TODO: gif]
 
 Step 5. Assemble the three new motors into a robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[pic]
+[TODO: pic]
 
 Step 6. Use the arms as leader and follower.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -65,13 +65,20 @@ Step 6. Use the arms as leader and follower.
 #. Start the robot arms from the same position.
 #. Tune Kp and Kd gains and maximum current as you like.
 
-[pic]
+[TODO: pic]
 
 Step 7. Make the robot arms bidirectional!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Program position control for the leader arm actuators (formerly control dial actuators)
 #. Set the position targets of the leader arm to the positions of the follower arm.
-#. Assuming the leader arm has controller IDs 1, 2 and 3, and the follower arm has controller IDs 4, 5 and 6, you can send current (ie torque) commands to the robot arms with the code *bus.CommandTorques(m0_current, m1_current, m2_current, m3_current, C610Subbus::kOneToFourBlinks); bus.CommandTorques(m4_current, m5_current, 0, 0, C610Subbus::kFiveToEightBlinks);*
-#. Congrats. Play with your robot! Make modifications!
+#. Assuming the leader arm has controller IDs 1, 2 and 3, and the follower arm has controller IDs 4, 5 and 6, you can send current (ie torque) commands to the robot arms with the code 
 
-[gif]
+.. code-block:: c++
+
+  bus.CommandTorques(m0_current, m1_current, m2_current, m3_current, C610Subbus::kOneToFourBlinks);
+  bus.CommandTorques(m4_current, m5_current, 0, 0, C610Subbus::kFiveToEightBlinks); 
+
+
+4. Congrats. Play with your robot! Make modifications!
+
+[TODO: gif]
