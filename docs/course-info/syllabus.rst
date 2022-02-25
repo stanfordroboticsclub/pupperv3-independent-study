@@ -1,10 +1,7 @@
-Stanford Robotics Independent Study
-#######################################################
+Syllabus
+================================
 
-Course overview
-****************
-
-.. figure:: _static/pupper-hero.jpg
+.. figure:: ../_static/pupper-hero.jpg
     :align: center
     :alt: Pupper
 
@@ -23,32 +20,3 @@ Prerequisites: CS106B or similar coding experience strongly recommended. Coding 
 Grading: Pass/Fail for 2 or more units. Grading based on participation.
 
 Faculty sponsor: Mac Schwager
-
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Course information
-  
-    course-info/syllabus
-    course-info/schedule
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Course material
-
-    course-material/lab-1
-    course-material/lab-2
-    course-material/lab-3
-    course-material/lab-4
-    course-material/lab-5
-    course-material/lab-6
-    course-material/final-project
-
-.. toctree::
-    :maxdepth: 1
-    :caption: References
-
-    reference/rpi-reference
-    reference/design
-    reference/libraries
