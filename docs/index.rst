@@ -10,7 +10,7 @@ Course overview
 
     Pupper Robot
 
-**An introduction to building AI-enabled robots.**
+**A hands-on introduction to building AI-enabled robots.**
 
 **Teaching team:** 
 
@@ -36,7 +36,7 @@ Researchers from Google Brain will give a guest lecture during the quarter on th
 
 **Grading:** Pass/Fail for 2 or more units. Grading based on participation.
 
-**Spring Quarter Faculty sponsor:** TBD
+**Spring Quarter Faculty sponsor:** Professor Karen Liu
 
 
 .. toctree::
