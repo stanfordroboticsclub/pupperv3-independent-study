@@ -31,24 +31,40 @@ Step 0. Setup
         <iframe src="https://www.youtube.com/embed/LKH2Drp_evc" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-Step 1. Connecting hardware
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|
 
-#. Attach the M2006 motor to the white cone via 3 M3x8mm flat head screws (M3 is the diameter, 8mm is the length, flat head means the top of the screw is flat and has a cone shape underneath.)
-#. Plug the M2006's 3-wire power cable and 4-wire ribbon encoder cable into the C610 motor controller.
-#. Plug the motor controller's 2-wire power cable into a XT30 port on the PCB in the row near the Teensy.
-#. Plug in the 2-wire CAN cable into a CAN port in the row near the Teensy.
-#. Plug the Teensy into the socket on the Pupper PCB if it's not already.
-#. Plug the power supply or battery into the Pupper PCB's XT60 connector.
-#. Plug the Teensy into your laptop via micro USB to USB A to C.
+Step 1. Assembly motor to base
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ../_static/nice-single-motor-rig.jpg
-    :align: center
-    
-    M2006 motor connected to C610 motor controller connected to Pupper PCB. Battery and power switch connected. Teensy plugged in.
+.. raw:: html
 
-Step 2. Set up the motor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/S7Yns-jh8pE" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+|
+
+Step 1.5. Attach dial to motor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/jO2BjMUmuZs" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+|
+
+Step 2. Connect and calibrate electronics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/r9CnXgrQnfI" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+|
+
 
 #. Turn on the system: press the power button on the PCB shield.
 #. Calibrate: Press and hold the button on the C610 motor controller until the motor starts moving and release.
@@ -56,15 +72,6 @@ Step 2. Set up the motor
 #. Set ID: Click the button on the C610 controller, then a little while later (half second or so) press the button again. The light should flash green.
 #. The light should now flash once every 2 seconds or so. The number of blinks indicates which ID it is. For example two blinks every 2 seconds indicates ID=2.
 
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/MgJmoMeYv3w" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-*Example of calibrating the motor and setting ID=3. For your actuator, you should set ID=1 instead.*
-
-|
 
 Step 3. Run the starter code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
