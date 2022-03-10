@@ -33,8 +33,10 @@ Step 2. Insert square nuts into plastic parts
 
 |
 
-Step 2. Assemble the three motors into a robot arm!
+Step 3. Assemble the three motors into a robot arm!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The robot arm we're making is actually one of Pupper's right legs so you'll see the instructional videos reference it as such.
 
 .. raw:: html
 
@@ -44,7 +46,7 @@ Step 2. Assemble the three motors into a robot arm!
 
 |
 
-#. We like to insert a screw driver with a 3mm diameter shank into the 3D printed part hole and then into the hole in the shaft to align them before inserting the bolt.
+* We like to insert a screw driver with a 3mm diameter shank into the 3D printed part hole and then into the hole in the shaft to align them before inserting the bolt.
 
 Step 3. Connect and calibrate electronics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -83,6 +85,8 @@ Step 4. Connect three more motors to use as control dials
 
 Step 5. Assemble the three new motors into a robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We're now making one of Pupper's left-side legs to use as the second robot arm.
 
 .. raw:: html
 

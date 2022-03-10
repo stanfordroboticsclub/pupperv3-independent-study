@@ -44,7 +44,20 @@ Step 1. Assembly motor to base
 
 |
 
-Step 1.5. Attach dial to motor
+Step 2. Fasten feet to base
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/StzPjM9KXO0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+|
+
+* Ignore that there's a whole robot arm attached in the video.
+
+Step 3. Attach dial to motor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -55,7 +68,7 @@ Step 1.5. Attach dial to motor
 
 |
 
-Step 2. Connect and calibrate electronics
+Step 4. Connect and calibrate electronics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
@@ -64,7 +77,6 @@ Step 2. Connect and calibrate electronics
     </div>
 
 |
-
 
 #. Turn on the system: press the power button on the PCB shield.
 #. Calibrate: Press and hold the button on the C610 motor controller until the motor starts moving and release.
