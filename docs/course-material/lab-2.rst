@@ -46,8 +46,6 @@ The robot arm we're making is actually one of Pupper's right legs so you'll see 
 
 |
 
-* We like to insert a screw driver with a 3mm diameter shank into the 3D printed part hole and then into the hole in the shaft to align them before inserting the bolt.
-
 Step 3. Connect and calibrate electronics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -62,7 +60,8 @@ Step 3. Connect and calibrate electronics
 Step 3. Run your code again on the new robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Upload and run code for controlling the 3 motors simultaneously.
+#. Note that the "zero" position of these motors is whatever position it was at when the Teensy and motor were first both powered on.
+#. Upload and run your code for controlling the 3 motors simultaneously.
 
 .. raw:: html
 
@@ -109,7 +108,7 @@ Step 6. Connect and calibrate electronics for second robot arm
 
 Step 6. Use the arms as leader and follower.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Use the same code as in step 12.
+#. Use the same code as in Step 4 where one set of motors controllers the other.
 #. Start the robot arms from the same position.
 #. Tune Kp and Kd gains and maximum current as you like.
 

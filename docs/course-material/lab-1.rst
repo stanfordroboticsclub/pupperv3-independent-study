@@ -140,7 +140,7 @@ Note: Some of these steps will cause the output disc to go unstable and violentl
 
 For each of these situations (except the ones that go unstable), rotate the disc around with your hand to get a physical sense for the PD behavior.
 
-#. Keeping Kd constant (0), experiment with Kp = -10 and Kp = 5000
+#. Keeping Kd constant (0), experiment with Kp = -100 and Kp = 5000
 #. Keeping Kp constant (1000), experiment with different Kd values from -10 to 1000
 #. See what happens when Kp is too high. Try Kp=50000 and Kd=100.
 #. See what happens when Kd is too high. Try Kp=0 and Kd=100000.
@@ -160,14 +160,15 @@ Step 7. Experiment with different loop rates
 Step 8. Program periodic motion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Program the motor to track a sinusoidal position, like the psuedocode below. 
+1. Set the update rate back to 200Hz (5ms interval).
+2. Program the motor to track a sinusoidal position, like the psuedocode below. 
 
 .. code-block:: c++
 
     float time = millis() / 1000.0
     position_target = sin(time)
 
-2. Play around with different frequencies. How high can you raise the frequency before the motor no longer moves as much as you expect? 
+3. Play around with different frequencies. How high can you raise the frequency before the motor no longer moves as much as you expect? 
 
 
 Fun fact, the maximum frequency you can go before the motor moves to only 71% (-3dB) of the intended motion is called the bandwidth.
