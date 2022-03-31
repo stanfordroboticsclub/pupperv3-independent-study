@@ -112,6 +112,7 @@ Step 4. Run bang-bang control
 
 #. Uncomment the bang-bang code in *src/main.cpp* and upload.
 #. Observe the effects of changing the current command to something else.
+#. *FEEL* how the controller behaves. Move the dial by hand and see how the controller reacts.
 
 .. raw:: html
 
@@ -127,10 +128,11 @@ Step 5. Write PD position control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Comment out the bang-bang controller.
-#. Complete the pd_control function in *src/main.cpp*. Your function should return a current command (100mA, 200mA etc) using the PD control law *tau = -Kp \* theta - Kd \* omega*.
+#. Complete the pd_control function in *src/main.cpp*. Your function should return a current command (100mA, 200mA etc) using the PD control law *tau = Kp \* (target - theta) + Kd \* (-omega)*.
 #. Use Kp = 1000.0 and Kd = 0.0 to start. Don't forget the negative signs! 
 #. Upload code to Teensy
-#. Play around with the disc. What happens when you rotate the disc just a little bit away from the target position? What happens when you rotate it a lot away from the target position? Do you feel the motor torque increase and then flatten out as you rotate the disc?
+#. *FEEL* the effect of the PD controller.
+#. What happens when you rotate the disc just a little bit away from the target position? What happens when you rotate it a lot away from the target position? Do you feel the motor torque increase and then flatten out as you rotate the disc?
 
 [Insert gif of proper PD joint control]
 
@@ -140,11 +142,11 @@ Note: Some of these steps will cause the output disc to go unstable and violentl
 
 For each of these situations (except the ones that go unstable), rotate the disc around with your hand to get a physical sense for the PD behavior.
 
-#. Keeping Kd constant (0), experiment with Kp = -100 and Kp = 5000
+#. Keeping Kd constant (0), experiment with Kp = -100 and Kp = 5000. Discuss with your partner how each feels. How are Kp and stiffness related?
 #. Keeping Kp constant (1000), experiment with different Kd values from -10 to 1000
 #. See what happens when Kp is too high. Try Kp=50000 and Kd=100.
 #. See what happens when Kd is too high. Try Kp=0 and Kd=100000.
-#. See what happens with just moderate damping. Try Kp=0 and Kd=100.
+#. See what happens with just moderate damping. Try Kp=0 and Kd=100. 
 
 The expected behavior is that higher Kp values will make the position control more stiff while higher Kd values will make the motor slower to achieve the desired position.
 If either gain is too high or is negative, the motor will go unstable.
