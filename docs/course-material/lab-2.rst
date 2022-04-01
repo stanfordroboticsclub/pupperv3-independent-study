@@ -17,7 +17,7 @@ Step 1. Connect and control 2 more motors
 
 #. Connect power and encoder cables from motors to controllers.
 #. Connect power and CAN cables from controllers to Pupper PCB. Make sure the CAN cables go into the same row (row near the Teensy).
-#. Set the new motor controllers to have different IDs. We use 1, 2, and 3.
+#. Set the new motor controllers to have different IDs. Use 1, 2, and 3. **Important:** *To set a motor controller to a certain ID, click (short press) press to put the motor controller into id-setting mode, then click N more times in quick succession, where N is the desired ID. Eg, for a desired ID of 3, press 3 more times after the first click.*
 #. Run your PD control on the two additional motors with some target position.
 
 [TODO: insert pic of compeleted setup]

@@ -84,6 +84,7 @@ Step 4. Connect and calibrate electronics
 #. Set ID: Click the button on the C610 controller, then a little while later (half second or so) press the button again. The light should flash green.
 #. The light should now flash once every 2 seconds or so. The number of blinks indicates which ID it is. For example two blinks every 2 seconds indicates ID=2.
 
+**Important:** *To set a motor controller to a certain ID, click (short press) press to put the motor controller into id-setting mode, then click N more times in quick succession, where N is the desired ID. Eg, for a desired ID of 3, press 3 more times after the first click.*
 
 Step 3. Run the starter code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
