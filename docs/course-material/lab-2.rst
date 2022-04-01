@@ -46,7 +46,7 @@ The robot arm we're making is actually one of Pupper's right legs so you'll see 
 
 |
 
-Step 3. Connect and calibrate electronics
+Step 4. Connect and calibrate electronics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -57,7 +57,7 @@ Step 3. Connect and calibrate electronics
 
 |
 
-Step 3. Run your code again on the new robot arm
+Step 5. Run your code again on the new robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Note that the "zero" position of these motors is whatever position it was at when the Teensy and motor were first both powered on.
@@ -73,7 +73,7 @@ Step 3. Run your code again on the new robot arm
 
 |
 
-Step 4. Connect three more motors to use as control dials
+Step 6. Connect three more motors to use as control dials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Connect three additional motors to the same CAN bus (ie same row of connectors).
 #. Calibrate and connect three additional motors to the Pupper PCB.
@@ -82,7 +82,7 @@ Step 4. Connect three more motors to use as control dials
 
 [TODO: gif]
 
-Step 5. Assemble the three new motors into a robot arm
+Step 7. Assemble the three new motors into a robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We're now making one of Pupper's left-side legs to use as the second robot arm.
@@ -95,7 +95,7 @@ We're now making one of Pupper's left-side legs to use as the second robot arm.
 
 |
 
-Step 6. Connect and calibrate electronics for second robot arm
+Step 8. Connect and calibrate electronics for second robot arm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -106,7 +106,7 @@ Step 6. Connect and calibrate electronics for second robot arm
 
 |
 
-Step 6. Use the arms as leader and follower.
+Step 9. Use the arms as leader and follower.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Use the same code as in Step 4 where one set of motors controllers the other.
 #. Start the robot arms from the same position.
@@ -114,7 +114,7 @@ Step 6. Use the arms as leader and follower.
 
 [TODO: pic]
 
-Step 7. Make the robot arms bidirectional!
+Step 10. Make the robot arms bidirectional!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Program position control for the leader arm actuators (formerly control dial actuators)
 #. Set the position targets of the leader arm to the positions of the follower arm.
