@@ -97,11 +97,11 @@ Step 3. Run the starter code
         <iframe src="https://www.youtube.com/embed/WMEhVteT9h4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-#. Examine where in the code the motor angle and velocity are read in *src/main.cpp*. Examine where the motor is commanded.
+#. Examine where in the code the motor angle and velocity are read in ``src/main.cpp``. Examine where the motor is commanded.
 #. Upload starter code to Teensy (right arrow icon in blue bar of VSCode or click the ant icon, then upload)
 #. Open the serial monitor in VSCode (icon that looks like a plug in bottom bar of VSCode or click ant icon, then monitor)
 #. Click into the serial monitor area and then press the key **s** to make the Teensy start printing out the angle and velocity of the connected motor.
-#. Press **s** again to stop the program. If you want to rerun the code, upload again or unplug and replug your computer from the Teensy.
+#. Press ``s`` again to stop the program. If you want to rerun the code, upload again or unplug and replug your computer from the Teensy.
 
 .. figure:: ../_static/example-output.png
     :align: center
@@ -111,7 +111,7 @@ Step 3. Run the starter code
 Step 4. Run bang-bang control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Uncomment the bang-bang code in *src/main.cpp* and upload.
+#. Uncomment the bang-bang code in ``src/main.cpp`` and upload.
 #. Observe the effects of changing the current command to something else.
 #. *FEEL* how the controller behaves. Move the dial by hand and see how the controller reacts.
 
@@ -129,7 +129,7 @@ Step 5. Write PD position control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Comment out the bang-bang controller.
-#. Complete the pd_control function in *src/main.cpp*. Your function should return a current command (100mA, 200mA etc) using the PD control law *tau = Kp \* (target - theta) + Kd \* (-omega)*.
+#. Complete the pd_control function in ``src/main.cpp``. Your function should return a current command (100mA, 200mA etc) using the PD control law ``tau = Kp * (target - theta) + Kd * (-omega)``.
 #. Use Kp = 1000.0 and Kd = 0.0 to start. Don't forget the negative signs! 
 #. Upload code to Teensy
 #. *FEEL* the effect of the PD controller.

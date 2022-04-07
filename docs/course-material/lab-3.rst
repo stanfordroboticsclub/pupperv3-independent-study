@@ -1,5 +1,5 @@
-Lab 3 - Safety Dance
-====================
+Lab 3 - Safety Dance (Fall 2021)
+================================
 
 .. contents:: :depth: 2
 
