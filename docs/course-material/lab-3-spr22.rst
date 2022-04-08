@@ -24,7 +24,7 @@ Step 3. Test robot simultaneously with simulator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Run ``python reacher/reacher_manual_control.py --run_on_robot``
 
-The robot should match the motion of the robot in the simulator.
+The robot should match the motion of the robot in the simulator. Note: if you click and drag the robot in the simulator, the real robot will NOT follow. The real robot is following the joint angles set by the sliders.
 
 Step 4. Code forward kinematics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
