@@ -56,6 +56,7 @@ Researchers from Google Brain will give a guest lecture during the quarter on th
     course-material/lab-3
     course-material/lab-3-spr22
     course-material/lab-4
+    course-material/lab-4-spr22
     course-material/lab-5
     course-material/lab-6
     course-material/final-project
