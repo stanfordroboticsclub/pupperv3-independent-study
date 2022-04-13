@@ -3,6 +3,30 @@ Lab 3 - Forward Kinematics
 
 .. contents:: :depth: 2
 
+
+Lecture 
+----------
+Forward kinematics lecture
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/nFqTsAEywpY" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+|
+
+Follow-up lecture to clarify some things
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/XAUXrRtINTQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+|
+
+
 Lab Instructions
 ----------------------------------
 *Goal: 1) Learn how to compute forward kinematics 2) Become familiar with simulation-to-real pipeline.*

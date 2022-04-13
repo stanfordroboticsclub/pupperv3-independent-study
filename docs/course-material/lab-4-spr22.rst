@@ -3,6 +3,17 @@ Lab 4 - Inverse Kinematics
 
 .. contents:: :depth: 2
 
+Lecture
+------------
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/FvQ6NbqDR1U" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+|
+
 Lab Instructions
 ----------------------------------
 *Goal: 1) Learn how to compute inverse kinematics 2) Become familiar with simulation-to-real pipeline.*
