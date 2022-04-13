@@ -1,4 +1,4 @@
-Lab 3 - Kinematics using Virtual Twin (Spr 22)
+Lab 3 - Forward Kinematics
 =======================================================
 
 .. contents:: :depth: 2

@@ -1,4 +1,4 @@
-Lab 4 - Inverse Kinematics using Virtual Twin (Spr 22)
+Lab 4 - Inverse Kinematics
 =======================================================
 
 .. contents:: :depth: 2
