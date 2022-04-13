@@ -27,7 +27,7 @@ Step 1. Code inverse kinematics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Implement ``ik_cost`` in ``reacher_kinematics.py`` as the squared-norm of the error between the position returned by ``FK(guess)`` and ``end_effector_pos``. 
 #. Implement ``calculate_jacobian`` in ``reacher_kinematics.py`` using the finite differencing method we covered in lecture. A good perturbation size is small, like 0.001.
-#. Implement ``calculate_inverse_kinematics`` in ``reacher_kinematics.py``. Play around with different step sizes, from 1 to 10, to see what works for you.
+#. Implement ``calculate_inverse_kinematics`` in ``reacher_kinematics.py``. Play around with different step sizes, from 1 to 100, to see what works for you.
 
 .. #. Optionally, implement Newton's method which takes much fewer iterations. The gist is you replace the jacobian transpose with the jacobian inverse and set gradient descent step size to 1.0. Set the initial angle guess to something besides 
 
