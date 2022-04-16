@@ -66,3 +66,4 @@ Researchers from Google Brain will give a guest lecture during the quarter on th
     reference/rpi-reference
     reference/design
     reference/libraries
+    reference/dji_reference
