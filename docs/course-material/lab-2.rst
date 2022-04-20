@@ -12,13 +12,17 @@ Lab Instructions
     
     Assembled teleop robot arms
 
-Step 1. Connect and control 2 more motors
+Step 1. Connect 2 more motors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Connect power and encoder cables from motors to controllers.
 #. Connect power and CAN cables from controllers to Pupper PCB. Make sure the CAN cables go into the same row (row near the Teensy).
 #. Set the new motor controllers to have different IDs. Use 1, 2, and 3. **Important:** *To set a motor controller to a certain ID, click (short press) press to put the motor controller into id-setting mode, then click N more times in quick succession, where N is the desired ID. Eg, for a desired ID of 3, press 3 more times after the first click.*
-#. Run your PD control on the two additional motors with some target position.
+
+Step 1.5. Control the 3 motors together
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Modify your PD control code from lab 1 to control all 3 motors (controlled independently).
 
 [TODO: insert pic of compeleted setup]
 
@@ -108,7 +112,7 @@ Step 8. Connect and calibrate electronics for second robot arm
 
 Step 9. Use the arms as leader and follower.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Use the same code as in Step 4 where one set of motors controllers the other.
+#. Use the same code as in Step 6 where one set of motors controllers the other.
 #. Start the robot arms from the same position.
 #. Tune Kp and Kd gains and maximum current as you like.
 
