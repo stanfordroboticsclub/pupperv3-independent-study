@@ -12,7 +12,7 @@ https://share.icloud.com/photos/0836FiHhLJuCXCs9TyqSW8Ilw
 Lab instructions
 -------------------
 
-These instructions assume you are running mac or linux. If you have Windows 10 or lower, I recommend dual-booting linux. If you have Windows 11, try using the Windows Linux Subsystem
+These instructions assume you are running Mac or Linux. If you have Windows 10 or lower, I recommend dual-booting linux. If you have Windows 11, try using the Windows Linux Subsystem. Otherwise proceed at your own risk!
 
 Step 1. Set up simulation environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
