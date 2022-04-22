@@ -17,7 +17,7 @@ These instructions assume you are running Mac or Linux. If you have Windows 10 o
 Step 1. Set up simulation environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Clone the simulator repository ``git clone https://github.com/jietan/puppersim.git``
-#. Follow the instructions in the **System setup** section and **Getting the code ready** section of the puppersim README.
+#. Follow the instructions in the `System setup <https://github.com/jietan/puppersim#system-setup/>`_ and `Getting the code ready <https://github.com/jietan/puppersim#getting-the-code-ready/>`_ sections of the Puppersim README.md.
 
 Step 2. Check you can train ARS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
