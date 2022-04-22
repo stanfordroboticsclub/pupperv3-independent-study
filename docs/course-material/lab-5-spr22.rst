@@ -37,7 +37,8 @@ Step 5. One day project of your choice
 Do your own mini project!
 
 Some ideas:
-* Teach the robot to trace out a specific shape (like inifinity sign or something) in the air. (medium)
+
+* Teach the robot to trace out a specific shape in the air. (medium)
 * Teach the robot to turn itself off by pressing its power button. (medium)
 * Add a cube in the pybullet simulation and teach the robot to kick it. (hard)
 * Turn off torque on the elbow or shoulder motor and make the robot learn to balance the arm vertically. (hard)
