@@ -19,7 +19,7 @@ Step 1. Set up simulation environment
 #. Clone the simulator repository ``git clone https://github.com/jietan/puppersim.git``
 #. Follow the instructions in the `System setup <https://github.com/jietan/puppersim#system-setup/>`_ and `Getting the code ready <https://github.com/jietan/puppersim#getting-the-code-ready/>`_ sections of the Puppersim README.md.
 
-Step 2. Check you can train ARS
+Step 2. Train the policy using RL (ARS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Follow instructions at https://github.com/Nate711/puppersim/blob/main/puppersim/reacher/README.md to run the commands to train the policy.
 #. Wait about 50 iterations until going to step 3 but leave it training
