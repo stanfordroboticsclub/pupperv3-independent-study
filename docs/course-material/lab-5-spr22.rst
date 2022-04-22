@@ -31,3 +31,13 @@ Step 3. Run your policy in simulator
 Step 4. Deploy policy to robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Follow instructions at https://github.com/Nate711/puppersim/blob/main/puppersim/reacher/README.md to deploy to your robot.
+
+Step 5. One day project of your choice
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Do your own mini project!
+
+Some ideas:
+* Teach the robot to trace out a specific shape (like inifinity sign or something) in the air. (medium)
+* Teach the robot to turn itself off by pressing its power button. (medium)
+* Add a cube in the pybullet simulation and teach the robot to kick it. (hard)
+* Turn off torque on the elbow or shoulder motor and make the robot learn to balance the arm vertically. (hard)
