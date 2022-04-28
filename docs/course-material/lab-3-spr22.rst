@@ -36,6 +36,11 @@ Lab Instructions
     
     TODO: picture of sim and real robot together
 
+Step 0. Flash Teensy with our firmware
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Download https://github.com/stanfordroboticsclub/reacher-lab/blob/main/firmware.hex
+#. Follow the instructions in this video to flash the Teensy. In the video when they say to use a paperclip to press the button, you can just press the button on the Teensy directly instead. https://www.youtube.com/watch?v=9PyiGUO9_KQ. If you can't find the Teensyloader application on your computer, you can upload any random Teensy code through VSCode and that will open the Teensyloader window which you can then use to flash the Teensy. 
+
 Step 1. Install simulator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Follow the instructions available at https://github.com/stanfordroboticsclub/reacher-lab to install and run the reacher code in simulation
