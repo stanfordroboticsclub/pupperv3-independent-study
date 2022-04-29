@@ -107,10 +107,6 @@ Step 5. Top panel assembly
 #. Connect other female XT60 into the bottom PCB
 
 
-Step 6. Bind RC receiver
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Bind the receiver [TODO: add instructions]
-
 .. figure:: ../_static/rpi-pinout.png
     :align: center
     
@@ -146,6 +142,21 @@ Step 6. Bind RC receiver
     
     Top view of top PCB.
 
+Step 6. Attach front panel
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Attach the Pi Camera to the front Pupper panel with M2x4 socket head cap screws
+#. Attach the front Pupper panel with 2 M3x6 button head screws to the bottom PCB
+
+Step 7. Bind RC receiver
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Get a FRSKY USB receiver and a BetaFPV Transmitter
+#. While holding the button on the USB receiver down, insert it into your computer. It should show a flashing red light.
+#. Then turn on the transmitter: Press and hold the power button for about 5 seconds until twice vibration. The LED will be green first. Wiggle the left stick until the LED turns blue. Then the LiteRadio is powered on.
+#. Press the BIND button from the back of the transmitter. The transmitter will enter the binding mode and last about 10 seconds, indicated by blue and red LED flash alternately.
+#. Once bound, the receiver should then show a solid (not blinking) green color. The transmitter should show a solid green color once bound [TODO: verify irl]
+#. Unplug and re-plug the receiver into your computer and restart the transmitter. Then go to https://gamepad-tester.com/ in CHROME (no other browsers will work) to test that the receiver is receiving messages from the transmitter.
+#. Refer to the transmitter manual for more info if needed https://support.betafpv.com/hc/en-us/articles/900003583046-Manual-for-LiteRadio-2.
+#. Refer to the receiver manual for more info if needed https://www.frsky-rc.com/wp-content/uploads/Downloads/Manual/XSR-SIM/XSR-SIM-%20manual.pdf 
 
 Step 8. Finish hardware assembly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -207,11 +218,3 @@ Wiring diagram
     :align: center
     
     Wiring diagram.
-
-Work in progress `manual <https://img1.wsimg.com/blobby/go/f1c92971-b8a4-41e7-ae17-e7be47117f4a/downloads/Pupper%202.1%20Manual.pdf?ver=1629132720898>`_.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. .. raw:: html
-
-..     <iframe frameborder=“0” style=“width:100%;height:781px;” src=“https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Pupper%20Wiring%20Diagram.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1yEQvr2gm86uTxlCF5FVwHrtBXnDOZnK8%26export%3Ddownload”></iframe>
-
-
