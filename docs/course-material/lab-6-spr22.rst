@@ -153,7 +153,7 @@ Step 7. Bind RC receiver
 #. While holding the button on the USB receiver down, insert it into your computer. It should show a flashing red light.
 #. Then turn on the transmitter: Press and hold the power button for about 5 seconds until twice vibration. The LED will be green first. Wiggle the left stick until the LED turns blue. Then the LiteRadio is powered on.
 #. Press the BIND button from the back of the transmitter. The transmitter will enter the binding mode and last about 10 seconds, indicated by blue and red LED flash alternately.
-#. Once bound, the receiver should then show a solid (not blinking) green color. The transmitter should show a solid green color once bound [TODO: verify irl]
+#. Once bound, the receiver should then show a solid (not blinking) green color.
 #. Unplug and re-plug the receiver into your computer and restart the transmitter. Then go to https://gamepad-tester.com/ in CHROME (no other browsers will work) to test that the receiver is receiving messages from the transmitter.
 #. Refer to the transmitter manual for more info if needed https://support.betafpv.com/hc/en-us/articles/900003583046-Manual-for-LiteRadio-2.
 #. Refer to the receiver manual for more info if needed https://www.frsky-rc.com/wp-content/uploads/Downloads/Manual/XSR-SIM/XSR-SIM-%20manual.pdf 
