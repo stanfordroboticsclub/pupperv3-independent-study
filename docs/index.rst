@@ -57,12 +57,14 @@ Researchers from Google Brain will give a guest lecture during the quarter on th
     course-material/lab-4-spr22
     course-material/lab-5-spr22
     course-material/lab-6-spr22
+    course-material/lab-7-spr22
     course-material/final-project
 
 .. toctree::
     :maxdepth: 1
     :caption: References
 
+    reference/faq
     reference/rpi-reference
     reference/design
     reference/libraries
