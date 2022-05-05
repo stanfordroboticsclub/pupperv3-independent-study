@@ -86,6 +86,8 @@ Step 4. Connect and calibrate electronics
 
 **Important:** *To set a motor controller to a certain ID, click (short press) press to put the motor controller into id-setting mode, then click N more times in quick succession, where N is the desired ID. Eg, for a desired ID of 3, press 3 more times after the first click.*
 
+**Another gotcha:** *In all the other labs and reference material, the motors are indexed 1-8. In the C++ code, they are indexed 0-7. So if you set a motor ID to 1, you must call* ``bus.Get(0)``. *The same goes for all methods provided by the C610 Teensy library.*
+
 Step 3. Run the starter code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
