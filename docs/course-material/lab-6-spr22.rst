@@ -36,17 +36,18 @@ CHECK. Ensure Motor IDs are correct
 
 Use this diagram to ensure you have the correct IDs set on your motor controllers. For each bulkhead you should have:
 
-Right knee motor: 1
+Right left/right motion hip motor: 1
 
 Right forward/back motion hip motor: 2
 
-Right left/right motion hip motor: 3
+Right knee motor: 3
 
-Left knee motor: 4
+Left left/right motion hip motor: 4
 
 Left forward/back motion hip motor: 5
 
-Left left/right motion hip motor: 6
+Left knee motor: 6
+
 
 .. figure:: ../_static/motor_ids.png
     :align: center
