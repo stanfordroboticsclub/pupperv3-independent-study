@@ -45,7 +45,7 @@ Researchers from Google Brain will give a guest lecture during the quarter on th
   
     course-info/syllabus
     course-info/schedule
-
+    course-info/sourcing
 
 .. toctree::
     :maxdepth: 2
@@ -69,3 +69,4 @@ Researchers from Google Brain will give a guest lecture during the quarter on th
     reference/design
     reference/libraries
     reference/dji_reference
+    
