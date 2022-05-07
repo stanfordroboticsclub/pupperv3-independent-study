@@ -8,6 +8,9 @@ Lecture
 
 https://share.icloud.com/photos/0836FiHhLJuCXCs9TyqSW8Ilw
 
+.. raw:: html
+
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSOdXk8Tz55ZzrXGzIeHZUEigYQPUS2bPOIQPeFiRIXSRrVX7hqwXnC1yJnaZoH-uvJZ0OnK4JAW14o/embed?start=false&loop=false&delayms=60000" frameborder="0" width="600" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 Lab instructions
 -------------------
