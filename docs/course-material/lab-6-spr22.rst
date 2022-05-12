@@ -192,7 +192,7 @@ Step 12. Take your robot on a walk
 #. Place your robot on a flat, level surface. Position the legs as shown in the picture below.
 #. Power on the robot by hooking up the power supply to the bottom PCB (like you've done in labs).
 #. Connect the Pi with USB C to your computer.
-#. Wait for the robot to complete the calibration sequence. **TODO** Add calibration video
+#. Wait for the robot to complete the calibration sequence. During the calibration sequence, the hips should turn inwards until they hit the stops, then back down. Then the thigh pieces should rotate upward until they hit their stops and then back down. **TODO** Add calibration video
 #. Flip all switches on the back RC transmitter down so they're away from you.
 #. Turn on the RC transmitter by pressing the middle power button and moving the left joystick up and down until the light turns blue.
 #. Wait ~30s for the RPi to boot (the green light should stop blinking).
