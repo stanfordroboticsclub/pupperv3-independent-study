@@ -12,8 +12,8 @@ Mini-lecture - TBD
         <iframe src="https://www.youtube.com/embed/0JgusquiDxg" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
+Slides: https://docs.google.com/presentation/d/1yjNz9ybcmJLKLkAnhHgILDR1hkjVbzhAphLXwZrO3mI/edit?usp=sharing
 |
-
 
 Lab instructions
 -------------------
