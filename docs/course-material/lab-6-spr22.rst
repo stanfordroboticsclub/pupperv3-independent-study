@@ -168,7 +168,7 @@ Step 8. Finish hardware assembly
 
 Step 9. Flash code onto the Teensy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. ``git clone https://github.com/Nate711/DJIPupperTests.git``
+#. Go to https://github.com/Nate711/DJIPupperTests/blob/master/README.md for instructions on how to download and set up the Teensy firmware
 #. Use VSCode PlatformIO to open the DJIPupperTests folder as a project and then upload the code to the Teensy. (Same thing as in labs 1-4).
 
 Step 10. Flash software image onto Raspberry Pi
