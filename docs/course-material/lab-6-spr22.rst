@@ -186,6 +186,18 @@ Step 11. Enable the heuristic controller
 #. Run ``sudo systemctl status robot`` to check that the service is running ok (should be green).
 #. Reboot with ``sudo reboot 0``
 
+Step 11.5. (Optional, Stanford only) Get Stanford Wifi access
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Once ssh'd into the robot, run ``ifconfig`` and record the ``wlan0`` MAC address. This is the MAC address for the WIFI chip. It should be a series of hex characters like f0:2f:4b:07:ee:ea. 
+#. Go to iprequest.stanford.edu on your computer, and make a new registration for the Pi. Select other device -> other wired. Enter the *Wireless* MAC address you got in step 1. 
+#. Restart the Pi and SSH back in
+#. Run ``sudo raspi-config``, go to System options -> Wireless LAN.
+#. Enter ``Stanford`` as the network name and leave password empty
+#. You might have to restart the Pi a few times, and use ``raspi-config`` to set the desired network a few times for it to work.
+#. To test if the Pi now has internet access, run ``ping www.google.com``. It should say you're getting bytes back from Google. 
+#. If it doesn't work, wait 20 minutes, restart the Pi, and try again! 
+#. Make sure you change the password after connecting to Wifi or it *will* get hacked. We highly recommend physically labeling the robot with the new password.
+
 Step 12. Take your robot on a walk
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Unplug the Pi from USB C.
