@@ -22,6 +22,8 @@ Course overview
 
 **Overview:**
 
+Welcome to the course page for Stanford Student Robotics' course in legged robots. The course has been taught at Stanford, UW, WashU, Foothills College, Brandeis and more! In summer 2022, Abdul Omira is even taking the course to Turkey and Lebanon. 
+
 In the first six weeks, students will learn key robotics concepts like including motor control, forward and inverse kinematics, and system identification; as well as important embodied-AI concepts including reinforcement learning and simulation. Through weekly labs, students will build a pair of teleoperated robot arms with haptic feedback, program a robot arm to learn to move by itself, and most importantly, build and program an agile robot quadruped called Pupper (pictured above). In the last four weeks of the course, students will pursue an open-ended project using Pupper as a platform, such as teaching Pupper to walk using reinforcement learning, building a vision system so Pupper can play fetch, or redesigning the hardware to make the robot more agile. 
 
 Researchers from Google Brain will give a guest lecture during the quarter on their work teaching robots new skills using reinforcement learning. 
