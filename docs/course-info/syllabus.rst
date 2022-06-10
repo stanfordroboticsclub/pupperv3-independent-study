@@ -13,7 +13,7 @@ Syllabus
 
 * Nathan Kau (MSME 2022, Stanford Student Robotics)
 * Gabrael Levine (CS 2023, Stanford Student Robotics)
-* Abdulwahab Omira (CS 2023, Stanford Student Robotics)
+* Abdulwahab Omria (CS 2023, Stanford Student Robotics)
 * Raghav Samavedam (CS 2024, Stanford Student Robotics)
 * Stuart Bowers (Hands-On Robotics)
 * Jie Tan (Google Brain)
