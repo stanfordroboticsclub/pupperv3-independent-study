@@ -14,9 +14,9 @@ Course overview
 
 **2023 Teaching team:** 
 
-* Gabrael Levine (CS 2023, Stanford Student Robotics)
-* Jaden Clark (CS 2024, Stanford Student Robotics)
-* Mark Leone (ME 2024, Stanford Student Robotics)
+* Head teacher: Gabrael Levine (CS 2023, Stanford Student Robotics)
+* Head teacher: Jaden Clark (CS 2024, Stanford Student Robotics)
+* Lead TA: Mark Leone (ME 2024, Stanford Student Robotics)
 * Stuart Bowers (Hands-On Robotics)
 * Jie Tan (Google DeepMind)
 
