@@ -72,6 +72,7 @@ The result should look something like this
     </div>
 
 **Debugging tips**
+
 #. Use numpy operators for your matrix operations
 #. Check the shape of your vectors and matrices matches what you expect. This is where most students run into trouble. Remember the rules of matrix multiplication.
 
