@@ -65,6 +65,7 @@ The robot arm we're making is actually one of Pupper's right legs so you'll see 
         <iframe src="https://www.youtube.com/embed/NqJmOAtKIpY" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
     
+|
 **Assembly Pro Tips**
 
 #. Use the tip of the hex driver to align the shoulder bolt with the square nut. This will make assembly much easier.
