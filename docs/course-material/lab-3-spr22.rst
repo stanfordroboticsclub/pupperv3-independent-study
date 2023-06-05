@@ -59,7 +59,7 @@ Step 4. Code forward kinematics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Complete the function ``calculate_forward_kinematics_robot`` in ``reacher/reacher_kinematics.py``.
-#. Run ``python reacher/reacher_manual_control.py`` to verify with the white ball.
+#. Run ``python reacher/reacher_manual_control.py`` to verify with the white ball. Ensure you are in the correct directory
 
 The output of your kinematics functions sets the white ball's position in the simulator, so ideally, the red ball fixed to the end of the robot arm should track the white ball nearly perfectly.
 
@@ -70,5 +70,10 @@ The result should look something like this
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://www.youtube.com/embed/to-O401I6PE" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
+
+**Debugging tips**
+#. Use numpy operators for your matrix operations
+#. Check the shape of your vectors and matrices matches what you expect. This is where most students run into trouble. Remember the rules of matrix multiplication.
+
 
 |
