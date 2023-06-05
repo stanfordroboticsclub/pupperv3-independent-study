@@ -6,6 +6,7 @@ Lab 5 - Reinforcement Learning
 Lecture 5.1: Intro to RL and Its Applications in Robotics
 ---------------------------------
 Intro to RL and Its Applications in Robotics Lecture by Tingnan Zhang, May 3, 2023. 
+
 .. raw:: html
 
 
@@ -16,6 +17,7 @@ Intro to RL and Its Applications in Robotics Lecture by Tingnan Zhang, May 3, 20
 Lecture 5.2: Reinforcement Learning on Legged Robots
 ---------------------------------
 Reinforcement learning on legged robots lecture by Jie Tan, May 10, 2023. 
+
 .. raw:: html
 
 
@@ -26,6 +28,7 @@ Reinforcement learning on legged robots lecture by Jie Tan, May 10, 2023.
 Lecture 5.3: Embodied Intelligence
 ---------------------------------
 Embodied Intelligence lecture by Adrien Gaidon, May 15, 2023.
+
 .. raw:: html
 
 
