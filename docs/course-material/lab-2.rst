@@ -30,6 +30,7 @@ Step 2. Insert square nuts into plastic parts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You may need to use force to get them in.
+
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
@@ -65,6 +66,7 @@ The robot arm we're making is actually one of Pupper's right legs so you'll see 
     </div>
     
 **Assembly Pro Tips**
+
 #. Use the tip of the hex driver to align the shoulder bolt with the square nut. This will make assembly much easier.
 #. Use force when inserting the shoulder bolts. Sometimes it is hard to get them through the hole in the motor shaft even if perfectly aligned.
 #. Tighten the shoulder bolts as tight as possible without stripping. It is vital for the future stability of your Pupper!
