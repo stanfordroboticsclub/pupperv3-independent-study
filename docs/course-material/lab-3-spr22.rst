@@ -71,6 +71,7 @@ The result should look something like this
         <iframe src="https://www.youtube.com/embed/to-O401I6PE" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
+|
 **Debugging tips**
 
 #. Use numpy operators for your matrix operations
