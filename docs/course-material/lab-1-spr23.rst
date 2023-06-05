@@ -3,7 +3,14 @@ Lab 1 - Hello PID
 
 .. contents:: :depth: 2
 
-Mini-lecture - Joint Control
+Mini-lecture - Actuators and PD Control (Stuart Bowers)
+-----------------------------
+
+https://zoom.us/rec/play/1c0cQPAeGysl2OjbuOgigHnmlHyTEdzntPMIwUq3tFQ0bxE1yJ781MQr1UrmIzBTN0PuVYDhlWObNmUg.e20PoeZU8edSzRHK?canPlayFromShare=true&from=share_recording_detail&continueMode=true&iet=_VWcdTH1meLrBAtT9fwL-yjSG6oPDJuW2UTWOcXA3vo.AG.kyJ9u1DE0K_CVca0wKXrhqiUB3As-hatD26picH4Y6MvaxcNNqM94Gy2knH60lSi2c6B6t3KZOg8irH_oajwz748w0232vC_iLsppO_RRIEKDE6Hm38olZezDpw.ZoMIVLiZzwHPKvBLzudkhQ.WFDGPTA2bzOwLNZb&componentName=rec-play&originRequestUrl=https%3A%2F%2Fzoom.us%2Frec%2Fshare%2FEN_-aXJm1VGmeriFlRF187jg1APqJJRDarMIvqMhzFfAt7JWZfeRXei3wxboVZ2Q.5yPTf8nYK2q5fcph%3Fiet%3D_VWcdTH1meLrBAtT9fwL-yjSG6oPDJuW2UTWOcXA3vo.AG.kyJ9u1DE0K_CVca0wKXrhqiUB3As-hatD26picH4Y6MvaxcNNqM94Gy2knH60lSi2c6B6t3KZOg8irH_oajwz748w0232vC_iLsppO_RRIEKDE6Hm38olZezDpw.ZoMIVLiZzwHPKvBLzudkhQ.WFDGPTA2bzOwLNZb
+
+.. raw:: html
+
+(Old) Mini-lecture - Joint Control
 -----------------------------
 
 .. raw:: html
