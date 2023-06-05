@@ -58,7 +58,7 @@ Researchers from Google DeepMind and Toyota Research Institute will give guest l
     :maxdepth: 2
     :caption: Course material
 
-    course-material/lab-1
+    course-material/lab-1-spr23
     course-material/lab-2
     course-material/lab-3-spr22
     course-material/lab-4-spr22
