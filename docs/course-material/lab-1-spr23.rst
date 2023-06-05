@@ -72,7 +72,7 @@ Step 3. Attach dial to motor
 Step 4. Connect and calibrate electronics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-** ELECTRONICS SAFETY: ** Make sure to separate the PCB from the metal base before turning on the power, otherwise the circuit will short! Either elevate the PCB above the base with the screws provided, or place the PCB next to the metal base on the table.
+**ELECTRONICS SAFETY:** Make sure to separate the PCB from the metal base before turning on the power, otherwise the circuit will short! Either elevate the PCB above the base with the screws provided, or place the PCB next to the metal base on the table.
 
 .. raw:: html
 
