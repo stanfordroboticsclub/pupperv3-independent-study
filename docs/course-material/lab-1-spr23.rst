@@ -90,7 +90,7 @@ Step 4. Connect and calibrate electronics
 
 **Important:** *To set a motor controller to a certain ID, click (short press) press to put the motor controller into id-setting mode, then click N more times in quick succession, where N is the desired ID. Eg, for a desired ID of 3, press 3 more times after the first click.*
 
-Step 3. Run the starter code
+Step 4. Run the starter code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Git clone the `starter code <https://github.com/stanfordroboticsclub/independent-study-lab1>`_, open in VSCode, and upload to Teensy.
@@ -112,7 +112,7 @@ Step 3. Run the starter code
     
     Example output from serial monitor.
 
-Step 4. Run bang-bang control
+Step 5. Run bang-bang control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Uncomment the bang-bang code in ``src/main.cpp`` and upload.
@@ -129,7 +129,7 @@ Step 4. Run bang-bang control
 
 |
 
-Step 5. Write PD position control
+Step 6. Write PD position control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Comment out the bang-bang controller.
@@ -141,7 +141,7 @@ Step 5. Write PD position control
 
 [Insert gif of proper PD joint control]
 
-Step 6. Experiment with different parameters
+Step 7. Experiment with different parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Note: Some of these steps will cause the output disc to go unstable and violently shake, be prepared!
 
@@ -158,13 +158,13 @@ If either gain is too high or is negative, the motor will go unstable.
 
 [Insert gif of some instability]
 
-Step 7. Experiment with different loop rates
+Step 8. Experiment with different loop rates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Examine where the code is checking if it's time to issue another control update.
 #. Change the update rate to 4Hz with Kp=1000 and Kd=100 to observe instability.
 
-Step 8. Program periodic motion
+Step 9. Program periodic motion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Set the update rate back to 200Hz (5ms interval).
