@@ -75,7 +75,7 @@ Step 3. Make a safety box
 #. Pick a "safety" box -- a virtual box in cartesian coordinates that the robot can operate safely in. For example, -0.1<x<0.1 and -.1<y>0.1 and 0<z<-0.2.
 #. Print a warning whenever the robot leaves the safety box.
 
-Step 4. Do the `safety dance <https://youtu.be/AjPau5QYtYs>`_
+Step 4. Do the `safety dance <https://www.youtube.com/watch?v=nM4okRvCg2g&ab_channel=MenWithoutHatsVEVO>`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Make a function to vibrate the motors (high frequency, low amplitude torque command sinusoid) 
 #. If you program a torque sinusoid, a safe range for the amplitude is around 500 - 4000mA. Any lower is barely perceptible.
